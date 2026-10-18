@@ -1,1049 +1,2829 @@
+:root {
+  --green: #174b32;
+  --dark-green: #103a28;
+  --lime: #d5ed65;
+  --cream: #f6f7ef;
+  --text: #1c2b22;
+  --muted: #5e6b61;
+  --white: #ffffff;
+  --line: #e1e7dc;
+  --font: Arial, Helvetica, sans-serif;
+  --heading-font: "Trirong", serif;
+    --body-font: "Work Sans", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  background: #ffffff;
+}
+p {
+  margin-top: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Trirong", serif;
+}
+body,
+p,
+a,
+button,
+input,
+select,
+textarea,
+li,
+label,
+span {
+    font-family: "Work Sans", sans-serif;
+}
+.container {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+.topbar {
+  background: var(--dark-green);
+  color: #ffffff;
+  font-size: 14px;
+}
+.topbar-inner {
+  min-height: 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.topbar-inner > div {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.topbar a {
+  color: #ffffff;
+}
+.topbar p {
+  margin: 0;
+  color: #dce9dc;
+}
+.separator {
+  opacity: 0.5;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 0 4px 20px #153d2810;
+}
+.header-inner {
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.logo-mark {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  background: var(--green);
+  color: var(--lime);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1;
+}
+.logo-mark span {
+  color: #ffffff;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+.logo-text strong {
+  color: var(--green);
+  font-size: 19px;
+  letter-spacing: 1.5px;
+}
+.logo-text small {
+  margin-top: 4px;
+  color: #66766a;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.brand_logo_img {
+  display: block;
+  width: 180px;
+  max-width: 100%;
+  height: 76px;
+  object-fit: contain;
+  object-position: left center;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.nav > a {
+  font-size: 16px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.nav > a:not(.nav-cta):hover {
+  color: #719b42;
+}
+.nav .nav-cta {
+  padding: 12px 16px;
+  border-radius: 7px;
+  background: var(--green);
+  color: #ffffff;
+}
+.menu-toggle {
+  display: none;
+  border: 0;
+  border-radius: 7px;
+  padding: 7px 12px;
+  background: var(--green);
+  color: #ffffff;
+  font-size: 25px;
+  cursor: pointer;
+}
+.hero {
+  position: relative;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #163d29;
+  color: #ffffff;
+}
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(9, 35, 22, 0.88),
+    rgba(12, 43, 27, 0.7),
+    rgba(12, 43, 27, 0.3)
+  );
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+  padding-top: 85px;
+  padding-bottom: 105px;
+  text-align: center;
+}
+.hero-content .eyebrow {
+  justify-content: center;
+}
+.hero h1 {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  font-size: clamp(42px, 5.5vw, 72px);
+  line-height: 1.12;
+  letter-spacing: -1.5px;
+}
+.hero-description {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  color: #f0f5ed;
+  font-size: 20px;
+  line-height: 1.7;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.hero-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: max-content;
+  max-width: 100%;
+  text-align: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 20px;
+  border-radius: 7px;
+  font-size: 16px;
+  font-weight: 800;
+  transition: transform 0.2s;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-lime {
+  background: var(--lime);
+  color: #1c3d25;
+}
+.btn-green {
+  background: var(--green);
+  color: #ffffff;
+}
+.hero-actions .btn {
+  min-height: 56px;
+  padding: 16px 27px;
+  border: 2px solid var(--lime);
+  border-radius: 50px;
+  background: var(--lime);
+  color: #173b28;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 18px;
+  
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+.hero-actions .btn:hover {
+  transform: translateY(-4px);
+  background: #e7f99b;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.25);
+}
+.hero-link {
+  min-height: 56px;
+  padding: 8px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  backdrop-filter: blur(8px);
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+.hero-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  border-color: var(--lime);
+  transform: translateY(-3px);
+}
+.play-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border: 1px solid var(--lime);
+  border-radius: 50%;
+  color: var(--lime);
+  font-size: 16px;
+}
+.hero-caption span {
+  width: 38px;
+  height: 2px;
+  background: var(--lime);
+}
+.stats-section {
+  background: var(--cream);
+  border-bottom: 1px solid var(--line);
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding-block: 28px;
+}
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 15px;
+  border-right: 1px solid #dce4d7;
+}
+.stat-item:last-child {
+  border-right: 0;
+}
+.stat-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e5efda;
+  color: var(--green);
+  font-size: 25px;
+}
+.stat-item strong,
+.stat-item small {
+  display: block;
+}
+.stat-item strong {
+  color: var(--green);
+  font-size: 18px;
+}
+.stat-item small {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.section {
+  padding: 95px 0;
+}
+.about-grid,
+.why-grid,
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+}
+.about-content h2,
+.section-heading h2,
+.contact-grid h2 {
+  margin: 0 0 22px;
+  color: var(--green);
+  font-size: clamp(34px, 3.7vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+.about-content h2 em,
+.section-heading h2 em {
+  color: #719b42;
+  font-style: normal;
+}
+.lead {
+  color: #4f6053;
+  font-size: 20px;
+  line-height: 1.7;
+}
+.about-content > p:not(.eyebrow) {
+  color: var(--muted);
+}
+.about-points {
+  display: grid;
+  gap: 18px;
+  margin: 28px 0;
+}
+.about-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+}
+.about-point > span {
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e7f0dd;
+  color: var(--green);
+  font-weight: 800;
+}
+.about-point strong {
+  font-size: 18px;
+  color: var(--green);
+}
+.about-point p {
+  margin: 3px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+.about-visual {
+  width: 100%;
+  min-height: 430px;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #e7f0dd;
+  box-shadow: 0 18px 45px rgba(25, 65, 35, 0.12);
+}
+.about-image {
+  display: block;
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 18px;
+  transition: transform 0.6s ease;
+}
+.about-visual:hover .about-image {
+  transform: scale(1.04);
+}
+.visual-decoration {
+  margin-bottom: 22px;
+  font-size: 65px;
+}
+.about-visual h3 {
+  max-width: 350px;
+  margin: 10px 0 24px;
+  font-size: 32px;
+  line-height: 1.3;
+}
+.visual-label,
+.visual-bottom {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.about-visual,
+.about-content {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+.about-visual {
+  transform: translateX(-70px);
+}
+.about-content {
+  transform: translateX(70px);
+}
+.about-visual.show,
+.about-content.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .about-visual {
+    min-height: 300px;
+  }
+  .about-image {
+    height: 300px;
+  }
+  .about-content h2 {
+    font-size: 34px;
+  }
+  .about-visual,
+  .about-content {
+    transform: translateY(35px);
+  }
+  .about-visual.show,
+  .about-content.show {
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .about-visual,
+  .about-content,
+  .about-image {
+    transition: none;
+  }
+}
+.ser_crdgva_section {
+  width: 100%;
+  padding: 80px 20px;
+  background: #f6f7ef;
+  box-sizing: border-box;
+  font-family: var(--font);
+}
+.ser_crdgva_section * {
+  box-sizing: border-box;
+}
+.ser_crdgva_container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ser_crdgva_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+.ser_crdgva_subtitle {
+  display: block;
+  color: #245a3d;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+.ser_crdgva_heading h2 {
+  max-width: 650px;
+  margin: 0;
+  color: #124b36;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.ser_crdgva_heading h2 span {
+  color: #80a940;
+}
+.ser_crdgva_view_more {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  background: #174c35;
+  color: #ffffff;
+  border: 1px solid #174c35;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+.ser_crdgva_view_more:hover {
+  background: #80a940;
+  border-color: #80a940;
+  color: #ffffff;
+}
+.ser_crdgva_view_more span {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+.ser_crdgva_view_more:hover span {
+  transform: translate(3px, -3px);
+}
+.ser_crdgva_grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.ser_crdgva_card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-width: 0;
+  min-height: 340px;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 25px;
+  border-radius: 12px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(5, 30, 18, 0.05) 0%,
+      rgba(5, 30, 18, 0.18) 35%,
+      rgba(5, 30, 18, 0.88) 100%
+    ),
+    var(--ser_crdgva_img);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 5px 18px rgba(20, 55, 35, 0.06);
+  transition: box-shadow 0.35s ease;
+}
+.ser_crdgva_card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--ser_crdgva_img);
+  background-size: cover;
+  background-position: center;
+  transform: scale(1);
+  transition: transform 0.65s ease;
+}
+.ser_crdgva_card:hover::before,
+.ser_crdgva_card:focus-within::before {
+  transform: scale(1.1);
+}
+.ser_crdgva_card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 40, 23, 0.08) 0%,
+    rgba(9, 40, 23, 0.3) 40%,
+    rgba(9, 40, 23, 0.95) 100%
+  );
+  transition: background 0.35s ease;
+}
+.ser_crdgva_card:hover,
+.ser_crdgva_card:focus-within {
+  box-shadow: 0 15px 35px rgba(20, 55, 35, 0.18);
+}
+.ser_crdgva_number {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  font-size: 13px;
+  font-weight: 700;
+  backdrop-filter: blur(6px);
+}
+.ser_crdgva_content {
+  width: 100%;
+  color: #ffffff;
+}
+.ser_crdgva_content h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+  transition: transform 0.35s ease;
+}
+.ser_crdgva_details {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition:
+    grid-template-rows 0.4s ease,
+    opacity 0.3s ease,
+    transform 0.4s ease,
+    visibility 0.3s ease;
+}
+.ser_crdgva_details p {
+  min-height: 0;
+  overflow: hidden;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.ser_crdgva_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: 17px;
+  color: #d4ee87;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.ser_crdgva_link:hover {
+  color: #ffffff;
+}
+.ser_crdgva_card:hover .ser_crdgva_details,
+.ser_crdgva_card:focus-within .ser_crdgva_details {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.ser_crdgva_card:hover .ser_crdgva_content h3,
+.ser_crdgva_card:focus-within .ser_crdgva_content h3 {
+  transform: translateY(-5px);
+}
+@media (max-width: 900px) {
+  .ser_crdgva_section {
+    padding: 65px 20px;
+  }
+  .ser_crdgva_grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+  }
+  .ser_crdgva_card {
+    min-height: 330px;
+    padding: 22px;
+  }
+  .ser_crdgva_content h3 {
+    font-size: 20px;
+  }
+}
+@media (max-width: 560px) {
+  .ser_crdgva_section {
+    padding: 45px 16px;
+  }
+  .ser_crdgva_header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 25px;
+  }
+  .ser_crdgva_heading h2 {
+    font-size: 32px;
+  }
+  .ser_crdgva_view_more {
+    padding: 12px 18px;
+  }
+  .ser_crdgva_grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .ser_crdgva_card {
+    min-height: 320px;
+    padding: 24px;
+  }
+  .ser_crdgva_details {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  .ser_crdgva_content h3 {
+    font-size: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ser_crdgva_card,
+  .ser_crdgva_card::before,
+  .ser_crdgva_details,
+  .ser_crdgva_content h3,
+  .ser_crdgva_view_more {
+    transition: none;
+  }
+}
+.vision {
+  background: #103d2c;
+  color: #ffffff;
+  overflow: hidden;
+}
+.section_pad {
+  padding: 65px 0 60px;
+}
+.vision .container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+.vision_grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 7%;
+}
+.vision_copy {
+  width: 100%;
+  min-width: 0;
+}
+.eybrow {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+.eybrow span {
+  display: inline-block;
+  width: 31px;
+  height: 2px;
+  background: #c8e96b;
+}
+.eybrow\.light {
+  color: #ffffff;
+}
+.vision_copy h2 {
+  margin: 0 0 38px;
+  font-size: clamp(34px, 3.2vw, 58px);
+  line-height: 1.17;
+  letter-spacing: -1.8px;
+  font-weight: 700;
+}
+.vision_copy h2 em {
+  color: #c8e96b;
+  font-style: normal;
+}
+.prpse_item {
+  display: grid;
+  grid-template-columns: 45px 1fr;
+  gap: 25px;
+  padding: 26px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+.prpse_item > span {
+  color: #c8e96b;
+  font-size: 19px;
+  font-weight: 700;
+}
+.prpse_item h3 {
+  margin: 0 0 12px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #ffffff;
+}
+.prpse_item p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 15px;
+  line-height: 1.85;
+}
+.btn_lght {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin-top: 20px;
+  padding: 13px 19px;
+  background: #ffffff;
+  color: #103d2c;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+.btn_lght span {
+  font-size: 19px;
+  transition: transform 0.3s ease;
+}
+.btn_lght:hover {
+  background: #c8e96b;
+  color: #103d2c;
+}
+.btn_lght:hover span {
+  transform: translate(3px, -3px);
+}
+.vision_imgg {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  overflow: hidden;
+  border-radius: 5px 100px 5px 5px;
+}
+.vision_imgg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.vision_image_label {
+  position: absolute;
+  left: 25px;
+  bottom: 25px;
+  padding: 17px 21px;
+  background: #c8e96b;
+  color: #103d2c;
+  font-size: 13px;
+  font-weight: 600;
+}
+@media (max-width: 991px) {
+  .section_pad {
+    padding: 55px 0;
+  }
+  .vision_grid {
+    gap: 35px;
+    grid-template-columns: 1fr 0.9fr;
+  }
+  .vision_imgg {
+    height: 560px;
+    border-top-right-radius: 70px;
+  }
+  .vision_copy h2 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+  .prpse_item {
+    grid-template-columns: 35px 1fr;
+    gap: 15px;
+  }
+  .prpse_item p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .section_pad {
+    padding: 45px 0;
+  }
+  .vision .container {
+    padding: 0 20px;
+  }
+  .vision_grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .vision_copy {
+    order: 1;
+  }
+  .vision_imgg {
+    order: 2;
+    height: 430px;
+    border-radius: 5px 65px 5px 5px;
+  }
+  .eybrow {
+    margin-bottom: 22px;
+  }
+  .vision_copy h2 {
+    font-size: clamp(34px, 8vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 28px;
+  }
+  .prpse_item {
+    padding: 22px 0;
+  }
+  .prpse_item h3 {
+    font-size: 18px;
+  }
+  .prpse_item p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .btn_lght {
+    margin-top: 15px;
+  }
+  .vision_image_label {
+    left: 12px;
+    bottom: 12px;
+    padding: 14px;
+    font-size: 12px;
+  }
+}
+.team_nm_section {
+  padding: 70px 5%;
+  background: #fff;
+  font-family: var(--font);
+}
+.team_nm_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 42px;
+}
+.team_nm_eyebrow {
+  display: inline-block;
+  color: #075f4c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 22px;
+}
+.team_nm_eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: #b9e65b;
+  margin: 0 10px 3px 0;
+}
+.team_nm_header h2 {
+  margin: 0;
+  color: #102b27;
+  font-size: clamp(34px, 4vw, 46px);
+  letter-spacing: -1.5px;
+}
+.team_nm_header h2 span {
+  color: #08765e;
+}
+.team_nm_header > p {
+  max-width: 390px;
+  color: #64716e;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.team_nm_grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 395px));
+  justify-content: center;
+  gap: 20px;
+}
+.team_nm_card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #dfe6da;
+  border-radius: 5px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.team_nm_card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(16, 43, 39, 0.08);
+}
+.team_nm_card img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center top;
+}
+.team_nm_info {
+  padding: 26px 23px 24px;
+}
+.team_nm_category {
+  color: #08715a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.team_nm_info h3 {
+  color: #102b27;
+  font-size: 20px;
+  margin: 17px 0 6px;
+}
+.team_nm_info h4 {
+  color: #08644f;
+  font-size: 12px;
+  margin: 0 0 17px;
+}
+.team_nm_info p {
+  color: #68736f;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+.team_nm_contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 35px;
+}
+.team_nm_contact_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 27px;
+  background: #075f4c;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #075f4c;
+  border-radius: 3px;
+  transition: all 0.25s ease;
+}
+.team_nm_contact_btn:hover {
+  background: #b9e65b;
+  border-color: #b9e65b;
+  color: #102b27;
+}
+@media (max-width: 768px) {
+  .team_nm_section {
+    padding: 50px 20px;
+  }
+  .team_nm_header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+  .team_nm_header > p {
+    margin: 0;
+  }
+  .team_nm_grid {
+    grid-template-columns: minmax(0, 395px);
+  }
+  .team_nm_card img {
+    height: 320px;
+  }
+}
+@media (max-width: 420px) {
+  .team_nm_card img {
+    height: 270px;
+  }
+  .team_nm_info {
+    padding: 22px 18px;
+  }
+}
+.cta_nhgf_section {
+  background: #103d2c;
+  padding: 75px 0;
+  overflow: hidden;
+}
+.cta_nhgf_container {
+  width: 100%;
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+.cta_nhgf_content {
+  flex: 1;
+  min-width: 0;
+}
+.cta_nhgf_eyebrow {
+  color: #c8e96b;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+.cta_nhgf_heading {
+  color: #ffffff;
+  font-family: var(--font);
+  font-size: clamp(34px, 3.2vw, 58px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+  margin: 0;
+}
+.cta_nhgf_action {
+  flex-shrink: 0;
+}
+.cta_nhgf_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 15px 24px;
+  background: #c8e96b;
+  color: #103d2c;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+.cta_nhgf_arrow {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.cta_nhgf_button:hover {
+  background: #d8f38a;
+  transform: translateY(-2px);
+}
+.cta_nhgf_button:hover .cta_nhgf_arrow {
+  transform: translate(3px, -3px);
+}
+@media (max-width: 991px) {
+  .cta_nhgf_section {
+    padding: 60px 0;
+  }
+  .cta_nhgf_container {
+    gap: 25px;
+  }
+  .cta_nhgf_heading {
+    font-size: 40px;
+  }
+  .cta_nhgf_button {
+    padding: 19px 24px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .cta_nhgf_section {
+    padding: 50px 0;
+  }
+  .cta_nhgf_container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+    padding: 0 20px;
+  }
+  .cta_nhgf_eyebrow {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+  }
+  .cta_nhgf_heading {
+    font-size: clamp(32px, 8vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -0.8px;
+  }
+  .cta_nhgf_action {
+    width: 100%;
+  }
+  .cta_nhgf_button {
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 18px 24px;
+    font-size: 15px;
+    white-space: normal;
+  }
+}
+.tstmnial_dfg_section {
+  background:   #F7F8F3;
+  color: #103d2c;
+  padding: 85px 0;
+  overflow: hidden;
+}
+.tstmnial_dfg_container {
+  max-width: 1450px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 0.85fr 2fr;
+  align-items: center;
+  gap: 55px;
+}
+.tstmnial_dfg_sidebar {
+  min-width: 0;
+}
+.tstmnial_dfg_eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #648b35;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 23px;
+}
+.tstmnial_dfg_eyebrow span {
+  display: inline-block;
+  width: 30px;
+  height: 2px;
+  background: #a8d653;
+}
+.tstmnial_dfg_heading {
+  margin: 0 0 32px;
+  color: #103d2c;
+  font-family: var(--font);
+  font-size: clamp(38px, 3.5vw, 53px);
+  line-height: 1.14;
+  letter-spacing: -1.2px;
+  font-weight: 700;
+}
+.tstmnial_dfg_heading span {
+  color: #719b40;
+}
+.tstmnial_dfg_brand {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 27px;
+}
+.tstmnial_dfg_logo {
+  width: 66px;
+  height: 66px;
+  flex-shrink: 0;
+}
+.tstmnial_dfg_logo svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.tstmnial_dfg_brand_info h3 {
+  color: #103d2c;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+.tstmnial_dfg_brand_info p {
+  color: #69766a;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+.tstmnial_dfg_rating {
+  padding: 21px 0;
+  border-top: 1px solid rgba(16, 61, 44, 0.16);
+  border-bottom: 1px solid rgba(16, 61, 44, 0.16);
+  margin-bottom: 25px;
+}
+.tstmnial_dfg_rating_top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.tstmnial_dfg_rating_number {
+  color: #103d2c;
+  font-size: 37px;
+  font-weight: 700;
+  line-height: 1;
+}
+.tstmnial_dfg_rating_details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.tstmnial_dfg_stars {
+  color: #a5c84b;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+.tstmnial_dfg_rating_details > span {
+  color: #69766a;
+  font-size: 12px;
+}
+.tstmnial_dfg_rating_line {
+  display: none;
+}
+.tstmnial_dfg_review_count {
+  margin: 13px 0 0;
+  color: #536456;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.tstmnial_dfg_cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  padding: 16px 21px;
+  background: #c8e96b;
+  color: #103d2c;
+  border: 1px solid #c8e96b;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+.tstmnial_dfg_cta:hover,
+.tstmnial_dfg_cta:hover {
+  background: #103d2c;
+  color: #ffffff;
+}
+.tstmnial_dfg_slider {
+  position: relative;
+  min-width: 0;
+  padding-bottom: 32px;
+}
+.tstmnial_dfg_track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 40px) / 3);
+  gap: 20px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.tstmnial_dfg_track::-webkit-scrollbar {
+  display: none;
+}
+.tstmnial_dfg_card {
+  min-width: 0;
+  min-height: 355px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid rgba(16, 61, 44, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(16, 61, 44, 0.045);
+  scroll-snap-align: start;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.tstmnial_dfg_card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(16, 61, 44, 0.09);
+}
+.tstmnial_dfg_card_header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 19px;
+}
+.tstmnial_dfg_avatar {
+  width: 47px;
+  height: 47px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #eaf2d9;
+  border: 1px solid #d7e6b8;
+  color: #315b32;
+  font-size: 14px;
+  font-weight: 700;
+}
+.tstmnial_dfg_user {
+  flex: 1;
+  min-width: 0;
+}
+.tstmnial_dfg_user h3 {
+  margin: 0 0 5px;
+  color: #103d2c;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.tstmnial_dfg_user span {
+  display: block;
+  color: #858b80;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.tstmnial_dfg_quote {
+  align-self: flex-start;
+  color: #c8e96b;
+  font-family: var(--font);
+  font-size: 44px;
+  line-height: 0.8;
+}
+.tstmnial_dfg_card_stars {
+  color: #a5c84b;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+.tstmnial_dfg_review_text {
+  color: #515b51;
+  font-size: 13px;
+  line-height: 1.9;
+  margin: 0 0 22px;
+}
+.tstmnial_dfg_card_footer {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid #edf0e7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.tstmnial_dfg_review_tag {
+  display: inline-block;
+  padding: 7px 10px;
+  background: #f0f5e6;
+  border-radius: 3px;
+  color: #587b37;
+  font-size: 10px;
+  font-weight: 600;
+}
+.tstmnial_dfg_leaf {
+  color: #a8cf61;
+  font-size: 19px;
+}
+.tstmnial_dfg_arrow {
+  position: absolute;
+  top: 43%;
+  z-index: 3;
+  width: 39px;
+  height: 39px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #103d2c;
+  border: 1px solid #e2e6dc;
+  border-radius: 50%;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(16, 61, 44, 0.1);
+  transition: 0.3s ease;
+}
+.tstmnial_dfg_arrow:hover {
+  background: #c8e96b;
+  border-color: #c8e96b;
+}
+.tstmnial_dfg_prev {
+  left: -19px;
+}
+.tstmnial_dfg_next {
+  right: -19px;
+}
+.tstmnial_dfg_dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+}
+.tstmnial_dfg_dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #d6d9ce;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.tstmnial_dfg_dot.active {
+  background: #8eaf48;
+  transform: scale(1.2);
+}
+@media (max-width: 1100px) {
+  .tstmnial_dfg_container {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .tstmnial_dfg_heading {
+    margin-bottom: 24px;
+  }
+  .tstmnial_dfg_brand {
+    margin-bottom: 20px;
+  }
+  .tstmnial_dfg_rating {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: middle;
+  }
+  .tstmnial_dfg_cta {
+    vertical-align: middle;
+  }
+  .tstmnial_dfg_track {
+    grid-auto-columns: calc((100% - 20px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  .tstmnial_dfg_section {
+    padding: 55px 0;
+  }
+  .tstmnial_dfg_container {
+    padding: 0 20px;
+    gap: 30px;
+  }
+  .tstmnial_dfg_heading {
+    font-size: 39px;
+    line-height: 1.2;
+    letter-spacing: -0.7px;
+  }
+  .tstmnial_dfg_brand_info h3 {
+    font-size: 17px;
+  }
+  .tstmnial_dfg_rating {
+    display: block;
+    margin-right: 0;
+    padding: 17px 0;
+  }
+  .tstmnial_dfg_cta {
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+  .tstmnial_dfg_track {
+    grid-auto-columns: 100%;
+    gap: 15px;
+  }
+  .tstmnial_dfg_card {
+    min-height: 315px;
+    padding: 23px 20px;
+  }
+  .tstmnial_dfg_arrow {
+    width: 34px;
+    height: 34px;
+    font-size: 23px;
+  }
+  .tstmnial_dfg_prev {
+    left: -12px;
+  }
+  .tstmnial_dfg_next {
+    right: -12px;
+  }
+}
+.footer_frminfo_section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0 90px;
+  background: #103d2c;
+  color: #ffffff;
+  isolation: isolate;
+}
+.footer_frminfo_section::before {
+  content: "";
+  position: absolute;
+  top: -230px;
+  right: -125px;
+  width: 430px;
+  height: 430px;
+  border: 1px solid rgba(255, 255, 255, 0.035);
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 50px rgba(255, 255, 255, 0.018),
+    0 0 0 100px rgba(255, 255, 255, 0.012);
+  pointer-events: none;
+  z-index: -1;
+}
+.footer_frminfo_container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 25px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 85px;
+}
+.footer_frminfo_copy {
+  padding-top: 5px;
+  min-width: 0;
+}
+.footer_frminfo_eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 25px;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+}
+.footer_frminfo_eyebrow span {
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  flex-shrink: 0;
+  background: #c8e96b;
+}
+.footer_frminfo_heading {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-family: var(--font);
+  font-size: clamp(38px, 3.1vw, 48px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -1.7px;
+}
+.footer_frminfo_heading em {
+  color: #c8e96b;
+  font-style: normal;
+}
+.footer_frminfo_intro {
+  max-width: 430px;
+  margin: 0 0 38px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.85;
+}
+.footer_frminfo_details {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.footer_frminfo_detail {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer_frminfo_detail_text {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+.footer_frminfo_detail_text small {
+  color: #c8e96b;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.4;
+}
+.footer_frminfo_detail_text strong {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.footer_frminfo_icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.075);
+  color: #c8e96b;
+  font-size: 19px;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+.footer_frminfo_detail:hover .footer_frminfo_icon {
+  background: #c8e96b;
+  color: #103d2c;
+}
+.footer_frminfo_form {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 34px 31px 30px;
+  background: #ffffff;
+  color: #17241b;
+  border-radius: 6px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
+}
+.footer_frminfo_form h3 {
+  margin: 0 0 7px;
+  color: #17241b;
+  font-size: 23px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+.footer_frminfo_form_intro {
+  margin: 0 0 27px;
+  color: #6b756d;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.footer_frminfo_form label {
+  display: block;
+  margin: 0 0 8px;
+  color: #17241b;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.footer_frminfo_form input,
+.footer_frminfo_form select,
+.footer_frminfo_form textarea {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0 0 17px;
+  padding: 13px 14px;
+  border: 1px solid #d9e2d7;
+  border-radius: 4px;
+  outline: none;
+  background: #fcfdfb;
+  color: #17241b;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.5;
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.footer_frminfo_form input {
+  height: 43px;
+}
+.footer_frminfo_form select {
+  height: 44px;
+  cursor: pointer;
+}
+.footer_frminfo_form textarea {
+  min-height: 74px;
+  resize: vertical;
+}
+.footer_frminfo_form input::placeholder,
+.footer_frminfo_form textarea::placeholder {
+  color: #879087;
+  opacity: 1;
+}
+.footer_frminfo_form input:focus,
+.footer_frminfo_form select:focus,
+.footer_frminfo_form textarea:focus {
+  border-color: #8eb94b;
+  box-shadow: 0 0 0 3px rgba(200, 233, 107, 0.2);
+}
+.footer_frminfo_submit {
+  width: 100%;
+  min-height: 50px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  border: 1px solid #c8e96b;
+  border-radius: 4px;
+  background: #c8e96b;
+  color: #103d2c;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+.footer_frminfo_submit span {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+.footer_frminfo_submit:hover {
+  background: #103d2c;
+  border-color: #103d2c;
+  color: #ffffff;
+}
+.footer_frminfo_submit:hover span {
+  transform: translate(3px, -3px);
+}
+.footer_frminfo_status {
+  margin: 12px 0 0;
+  color: #315f31;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+.footer_frminfo_status:empty {
+  display: none;
+}
+.footer_frminfo_note {
+  display: block;
+  margin-top: 20px;
+  color: #858d85;
+  font-size: 9px;
+  line-height: 1.8;
+}
+@media (max-width: 991px) {
+  .footer_frminfo_section {
+    padding: 65px 0;
+  }
+  .footer_frminfo_container {
+    gap: 40px;
+  }
+  .footer_frminfo_heading {
+    font-size: 39px;
+    letter-spacing: -1px;
+  }
+  .footer_frminfo_form {
+    padding: 28px 24px;
+  }
+}
+@media (max-width: 767px) {
+  .footer_frminfo_section {
+    padding: 50px 0;
+  }
+  .footer_frminfo_container {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding: 0 20px;
+  }
+  .footer_frminfo_copy {
+    padding-top: 0;
+  }
+  .footer_frminfo_eyebrow {
+    margin-bottom: 20px;
+    font-size: 10px;
+    letter-spacing: 1.7px;
+  }
+  .footer_frminfo_heading {
+    font-size: clamp(35px, 8vw, 44px);
+    line-height: 1.18;
+    margin-bottom: 17px;
+  }
+  .footer_frminfo_intro {
+    margin-bottom: 28px;
+    font-size: 13px;
+  }
+  .footer_frminfo_details {
+    gap: 20px;
+  }
+  .footer_frminfo_detail_text strong {
+    font-size: 12px;
+  }
+  .footer_frminfo_form {
+    padding: 27px 21px;
+  }
+  .footer_frminfo_form h3 {
+    font-size: 22px;
+  }
+}
+@media (max-width: 380px) {
+  .footer_frminfo_container {
+    padding: 0 15px;
+  }
+  .footer_frminfo_heading {
+    font-size: 33px;
+  }
+  .footer_frminfo_form {
+    padding: 24px 16px;
+  }
+  .footer_frminfo_icon {
+    width: 39px;
+    height: 39px;
+  }
+}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Bhawana Agrotech agriculture consultancy, organic farming, hydroponics, guava farming, drip irrigation and dragon fruit farming.">
-  <title>Bhawana Agrotech | Modern Farming Solutions</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+.footer {
+  padding: 30px 0;
+  background: #0b2d1e;
+  color: #d5e1d4;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-inner p,
+.footer-inner > span {
+  margin: 0;
+  font-size: 16px;
+}
+.footer-logo .logo-mark {
+  background: var(--lime);
+  color: var(--green);
+}
+.footer-logo .logo-mark span {
+  color: var(--green);
+}
+.footer-logo .logo-text strong {
+  color: #ffffff;
+}
+.footer-logo .logo-text small {
+  color: #b8c9b8;
+}
+@media (max-width: 1050px) {
+  .nav {
+    gap: 14px;
+  }
+  .nav > a {
+    font-size: 16px;
+  }
+  .about-grid,
+  .why-grid,
+  .contact-grid {
+    gap: 35px;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-item:nth-child(2) {
+    border-right: 0;
+  }
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    width: calc(100% - 34px);
+  }
+  .topbar-inner {
+    padding: 10px 0;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .topbar-inner > p {
+    display: none;
+  }
+  .header-inner {
+    min-height: 76px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 15px 22px 22px;
+    background: #ffffff;
+    box-shadow: 0 15px 20px #163d2815;
+  }
+  .nav.nav-open {
+    display: flex;
+  }
+  .nav > a:not(.nav-cta) {
+    padding: 12px 4px;
+    border-bottom: 1px solid var(--line);
+  }
+  .nav .nav-cta {
+    margin-top: 14px;
+    text-align: center;
+  }
+  .hero {
+    min-height: 620px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-content .eyebrow {
+    justify-content: center;
+  }
+  .hero h1 {
+    font-size: clamp(36px, 9vw, 52px);
+  }
+  .hero-description {
+    font-size: 18px;
+  }
+  .hero-actions {
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 18px;
+  }
+  .hero-actions .btn,
+  .hero-link {
+    width: fit-content;
+    max-width: 100%;
+  }
+  .hero-caption {
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: calc(100% - 24px);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+  }
+  .stats-grid {
+    gap: 15px;
+    padding-block: 22px;
+  }
+  .stat-item {
+    gap: 10px;
+    border-right: 0;
+  }
+  .stat-icon {
+    width: 38px;
+    height: 38px;
+  }
+  .section {
+    padding: 70px 0;
+  }
+  .about-grid,
+  .why-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-visual {
+    min-height: 320px;
+  }
+  .about-visual h3 {
+    font-size: 27px;
+  }
+  .section-heading {
+    display: block;
+  }
+  .section-heading > p {
+    margin-top: 20px;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    min-height: 255px;
+  }
+  .why-visual {
+    min-height: 340px;
+    padding: 35px;
+  }
+  .contact-card {
+    padding: 22px;
+  }
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  \*,
+  \*::before,
+  \*::after {
+    transition: none !important;
+  }
+}
+\*,
+\*::before,
+\*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+body {
+  overflow-x: hidden;
+}
+.container,
+.hero-content,
+.ser_crdgva_container,
+.vision .container,
+.team_nm_header,
+.team_nm_grid,
+.team_nm_contact,
+.cta_nhgf_container,
+.tstmnial_dfg_container,
+.footer_frminfo_container,
+.faq_frminfo_container {
+  width: calc(100% - 48px);
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.ser_crdgva_section,
+.team_nm_section,
+.faq_frminfo_section {
+  padding-left: 0;
+  padding-right: 0;
+}
+.ser_crdgva_grid,
+.about-grid,
+.vision_grid,
+.tstmnial_dfg_container,
+.footer_frminfo_container {
+  min-width: 0;
+}
+.ser_crdgva_container,
+.cta_nhgf_container,
+.footer_frminfo_container,
+.faq_frminfo_container {
+  min-width: 0;
+}
+@media (max-width: 760px) {
+  .container,
+  .hero-content,
+  .ser_crdgva_container,
+  .vision .container,
+  .team_nm_header,
+  .team_nm_grid,
+  .team_nm_contact,
+  .cta_nhgf_container,
+  .tstmnial_dfg_container,
+  .footer_frminfo_container,
+  .faq_frminfo_container {
+    width: calc(100% - 32px);
+    max-width: 100%;
+  }
+}
+img,
+video {
+  max-width: 100%;
+}
+/* ===== BHAVANA AGROTECH: COMMON BUTTON DESIGN ===== */
 
-  <div class="topbar">
-    <div class="container topbar-inner">
-      <span>Growing smarter. Farming sustainably.</span>
-      <div><a href="tel:+918303839200">+91 830-383-9200</a><span class="top-divider">|</span><a href="mailto:info@bhawanabiotech.com">info@bhawanabiotech.com</a></div>
-    </div>
-  </div>
+.nav .nav-cta,
+.btn,
+.hero-link,
+.ser_crdgva_view_more,
+.ser_crdgva_link,
+.btn_lght,
+.team_nm_contact_btn,
+.cta_nhgf_button,
+.tstmnial_dfg_cta,
+.footer_frminfo_submit,
+.faq_frminfo_cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
-  <header class="header">
-    <div class="container header-inner">
+    padding: 14px 24px;
+    min-height: 48px;
 
-      <a href="#home" class="logo">
-       <img src="logo.png" class="brand_logo_img" alt="Bhawana Biotech Logo">
-      </a>
+    background: #174b32;
+    color: #ffffff;
 
-      <button class="menu-toggle" id="menuToggle"
-        aria-label="Toggle navigation" aria-expanded="false">
-        ☰
-      </button>
+    border: 1px solid #174b32;
+    border-radius: 62px;
 
-      <nav class="nav" id="navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Services</a>
-        <a href="#why-us">Why Choose Us</a>
-        <a href="#contact">Contact</a>
-        <a href="#contact" class="nav-cta">Let's Talk ↗</a>
-      </nav>
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+    text-align: center;
 
-    </div>
-  </header>
+    cursor: pointer;
+    box-sizing: border-box;
 
-  <main>
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
 
-    <!-- HERO VIDEO SECTION -->
-    <section class="hero" id="home">
+/* Hover effect for all main buttons */
 
-      <video class="hero-video" autoplay muted loop playsinline>
-        <source src="header video.mp4" type="video/mp4">
-        Your browser does not support video.
-      </video>
+.nav .nav-cta:hover,
+.btn:hover,
+.hero-link:hover,
+.ser_crdgva_view_more:hover,
+.ser_crdgva_link:hover,
+.btn_lght:hover,
+.team_nm_contact_btn:hover,
+.cta_nhgf_button:hover,
+.tstmnial_dfg_cta:hover,
+.footer_frminfo_submit:hover,
+.faq_frminfo_cta:hover {
+    background: #d5ed65;
+    color: #174b32;
+    border-color: #d5ed65;
+    transform: translateY(-2px);
+}
 
-      <div class="hero-overlay"></div>
+/* Keep button text and arrows aligned */
 
-      <div class="container hero-content">
-        <p class="eyebrow light">
-          <span></span> GROW SMARTER WITH BHAWANA AGROTECH
-        </p>
+.nav .nav-cta span,
+.btn span,
+.hero-link span,
+.ser_crdgva_view_more span,
+.btn_lght span,
+.cta_nhgf_button span,
+.tstmnial_dfg_cta span,
+.footer_frminfo_submit span,
+.faq_frminfo_cta span {
+    font-family: Arial, Helvetica, sans-serif;
+}
 
-        <h1>
-          Growing Better Farms.
-          <br>
-          <em>Building a Greener</em> Future.
-        </h1>
+/* Mobile responsiveness */
 
-        <p class="hero-description">
-          Practical agriculture consultancy and modern farming
-          solutions to help you make confident decisions, improve
-          productivity and grow sustainably.
-        </p>
+@media (max-width: 600px) {
+    .nav .nav-cta,
+    .btn,
+    .hero-link,
+    .ser_crdgva_view_more,
+    .ser_crdgva_link,
+    .btn_lght,
+    .team_nm_contact_btn,
+    .cta_nhgf_button,
+    .tstmnial_dfg_cta,
+    .footer_frminfo_submit,
+    .faq_frminfo_cta {
+        padding: 12px 18px;
+        min-height: 46px;
+        font-size: 14px;
+    }
+}
 
-        <div class="hero-actions">
-          <a href="#services" class="btn btn-lime">
-            Explore Our Services ↗
-          </a>
+/* ===== BHAVANA PROJECTS SECTION ===== */
 
-          <a href="#about" class="hero-link">
-            <span class="play-icon">▶</span>
-            Discover Bhawana Agrotech
-          </a>
-        </div>
+.bhp_projects {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background: #f7f8f3;
+  overflow: hidden;
+}
 
-        <div class="hero-caption">
-          <span></span> EXPERT GUIDANCE. PRACTICAL FARMING.
-        </div>
-      </div>
+.bhp_container {
+  width: min(1200px, calc(100% - 40px));
+  margin-inline: auto;
+}
 
-    </section>
+/* Section heading */
 
-    <!-- OUR APPROACH -->
-   
+.bhp_section_heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 35px;
+  margin-bottom: 38px;
+}
 
-    <!-- ABOUT -->
-    <section class="section about-section" id="about">
-      <div class="container about-grid">
+.bhp_eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  color: #174b32;
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
 
-       <div class="about-visual">
-  <img
-    src="about_img.jpeg"
-    alt="Greenhouse protected cultivation farm"
-    class="about-image"
-  >
-</div>
+.bhp_eyebrow span {
+  width: 24px;
+  height: 2px;
+  background: #91b84a;
+}
 
-        
-<div class="about-content">
-  <p class="eyebrow">
-    <span></span> ABOUT BHAWANA BIOTECH
-  </p>
+.bhp_section_heading h2 {
+  margin: 0;
+  color: #183c2b;
+  font-family: "Trirong", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.2;
+}
 
-  <h2>
-    Helping farms grow
-    with <em>purpose.</em>
-  </h2>
+.bhp_section_heading h2 em {
+  color: #688d43;
+  font-weight: 400;
+}
 
-  <p class="lead">
-    <strong>
-      Bhawana Biotech Pvt. Ltd. is an agricultural technology
-      and consultancy firm headquartered in Lucknow, Uttar Pradesh.
-    </strong>
-  </p>
+.bhp_section_heading > p {
+  max-width: 390px;
+  margin: 0 0 5px;
+  color: #626b62;
+  font-family: "Work Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.8;
+}
 
-  <p>
-    We work to modernize Indian agriculture through scientific,
-    sustainable and commercially focused farming practices.
-    Our goal is to help farmers, landowners and investors plan
-    agricultural ventures with better preparation, technical
-    guidance and crop management.
-  </p>
+/* Project cards grid */
 
-  <div class="about-points">
-    <div class="about-point">
-      <span>✓</span>
-      <div>
-        <strong>Practical expertise</strong>
-        <p>From planning to crop scheduling</p>
-      </div>
-    </div>
+.bhp_project_grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+}
 
-    <div class="about-point">
-      <span>✓</span>
-      <div>
-        <strong>Technology-led methods</strong>
-        <p>Protected cultivation and smart irrigation</p>
-      </div>
-    </div>
-  </div>
+.bhp_project_card {
+  position: relative;
+  min-width: 0;
+  min-height: 440px;
+  overflow: hidden;
+  isolation: isolate;
+  border-radius: 10px;
+  background: #183c2b;
+}
 
-  <a href="#contact" class="btn btn-green">
-    Talk to Our Team ↗
-  </a>
-</div>
+.bhp_project_card.bhp_project_large {
+  min-height: 500px;
+}
+
+/* Project images */
+
+.bhp_project_card > img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.bhp_project_card:hover > img {
+  transform: scale(1.05);
+}
+
+/* Dark image overlay */
+
+.bhp_project_shade {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 25, 16, 0.03) 10%,
+    rgba(10, 25, 16, 0.35) 45%,
+    rgba(10, 25, 16, 0.92) 100%
+  );
+}
+
+/* Card content */
+
+.bhp_project_content {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  left: 28px;
+  color: #ffffff;
+}
+
+.bhp_project_category {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #d5ed85;
+  font-family: "Work Sans", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  line-height: 1.6;
+}
+
+.bhp_project_content h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-family: "Trirong", serif;
+  font-size: clamp(24px, 3vw, 34px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.bhp_project_content p {
+  max-width: 450px;
+  margin: 0 0 20px;
+  color: rgba(255, 255, 255, 0.88);
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* Project links */
+
+.bhp_project_link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(213, 237, 133, 0.8);
+  color: #ffffff;
+  font-family: "Work Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease, border-color 0.25s ease;
+}
+
+.bhp_project_link:hover {
+  color: #d5ed85;
+  border-color: #d5ed85;
+}
+
+/* Disclaimer */
+
+.bhp_project_disclaimer {
+  margin: 20px 0 0;
+  color: #737b72;
+  font-family: "Work Sans", sans-serif;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ===== TABLET ===== */
+
+@media (max-width: 900px) {
+  .bhp_section_heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .bhp_section_heading > p {
+    max-width: 600px;
+  }
+
+  .bhp_project_grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .bhp_project_card,
+  .bhp_project_card.bhp_project_large {
+    min-height: 430px;
+  }
+
+  .bhp_project_content {
+    right: 22px;
+    bottom: 22px;
+    left: 22px;
+  }
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+  .bhp_projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .bhp_container {
+    width: calc(100% - 32px);
+  }
+
+  .bhp_section_heading {
+    margin-bottom: 25px;
+  }
+
+  .bhp_section_heading h2 {
+    font-size: 30px;
+  }
+
+  .bhp_section_heading > p {
+    font-size: 14px;
+  }
+
+  .bhp_project_grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .bhp_project_card,
+  .bhp_project_card.bhp_project_large {
+    min-height: 400px;
+  }
+
+  .bhp_project_content {
+    right: 20px;
+    bottom: 22px;
+    left: 20px;
+  }
+
+  .bhp_project_content h3 {
+    font-size: 27px;
+  }
+
+  .bhp_project_content p {
+    font-size: 13px;
+  }
+
+  .bhp_project_category {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+
+  .bhp_project_disclaimer {
+    font-size: 11px;
+  }
+}
+
+/* Small mobile screens */
+
+@media (max-width: 380px) {
+  .bhp_project_card,
+  .bhp_project_card.bhp_project_large {
+    min-height: 370px;
+  }
+
+  .bhp_project_content h3 {
+    font-size: 24px;
+  }
+}
 
 
-      </div>
-    </section>
+/* Valuable Customers Section */
 
-    <!-- SERVICES -->
-   <section class="ser_crdgva_section">
-    <div class="ser_crdgva_container">
-
-        <!-- Section Heading -->
-        <div class="ser_crdgva_header">
-            <div class="ser_crdgva_heading">
-                <span class="ser_crdgva_subtitle">WHAT WE DO</span>
-                <h2>Solutions for <span>Modern Agriculture</span></h2>
-            </div>
-
-            <a href="/services" class="ser_crdgva_view_more">
-                View More <span>↗</span>
-            </a>
-        </div>
-
-        <!-- Service Cards -->
-        <div class="ser_crdgva_grid">
-
-            <div class="ser_crdgva_card"
-                 style="--ser_crdgva_img:url('Polyhouse1.jpeg')">
-                <span class="ser_crdgva_number">01</span>
-                <div class="ser_crdgva_content">
-                    <h3>Polyhouse &
-Nethouse Solutions</h3>
-                    <div class="ser_crdgva_details">
-                        <p>Get expert guidance to assess farming opportunities, plan your approach and make informed agricultural decisions.</p>
-                        <a href="/agriculture-consultancy" class="ser_crdgva_link">Learn More ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ser_crdgva_card"
-                 style="--ser_crdgva_img:url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=900&q=85')">
-                <span class="ser_crdgva_number">02</span>
-                <div class="ser_crdgva_content">
-                    <h3>Organic Farming</h3>
-                    <div class="ser_crdgva_details">
-                        <p>Explore organic farming practices and build a more thoughtful, sustainable growing process.</p>
-                        <a href="/organic-farming" class="ser_crdgva_link">Learn More ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ser_crdgva_card"
-                 style="--ser_crdgva_img:url('hydroponic_farming.jpeg')">
-                <span class="ser_crdgva_number">03</span>
-                <div class="ser_crdgva_content">
-                    <h3>Hydroponic Farming</h3>
-                    <div class="ser_crdgva_details">
-                        <p>Discover soilless growing systems and learn whether hydroponics fits your space and goals.</p>
-                        <a href="/hydroponic-farming" class="ser_crdgva_link">Learn More ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ser_crdgva_card"
-                 style="--ser_crdgva_img:url('guava.jpeg')">
-                <span class="ser_crdgva_number">04</span>
-                <div class="ser_crdgva_content">
-                    <h3>Guava Farming Consultancy</h3>
-                    <div class="ser_crdgva_details">
-                        <p>Get crop-focused guidance for planning and managing a successful guava farming project.</p>
-                        <a href="/guava-farming" class="ser_crdgva_link">Learn More ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ser_crdgva_card"
-                 style="--ser_crdgva_img:url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=900&q=85')">
-                <span class="ser_crdgva_number">05</span>
-                <div class="ser_crdgva_content">
-                    <h3>Drip Irrigation</h3>
-                    <div class="ser_crdgva_details">
-                        <p>Explore targeted irrigation solutions that help manage water use and support healthier crops.</p>
-                        <a href="/drip-irrigation" class="ser_crdgva_link">Learn More ↗</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="ser_crdgva_card"
-                 style="--ser_crdgva_img:url('dragonfruit.jpeg')">
-                <span class="ser_crdgva_number">06</span>
-                <div class="ser_crdgva_content">
-                    <h3>Dragon Fruit Farming</h3>
-                    <div class="ser_crdgva_details">
-                        <p>Learn about dragon fruit cultivation, crop management and the essentials of starting your farm.</p>
-                        <a href="/dragon-fruit-farming" class="ser_crdgva_link">Learn More ↗</a>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <!-- WHY CHOOSE US -->
+.bva-customers {
+  width: 100%;
+  padding: 50px 0 60px;
+  background: #ffffff;
  
-<section class="vision section_pad">
-  <div class="container vision_grid">
-
-    <!-- Left Content -->
-    <div class="vision_copy">
-
-      <div class="eybrow light">
-        <span></span> OUR PURPOSE
-      </div>
-
-      <h2>
-        Better decisions<br>
-        for <em>better farming.</em>
-      </h2>
-
-      <div class="prpse_item">
-        <span>01</span>
-        <div>
-          <h3>Our Vision</h3>
-          <p>
-            To support the shift toward sustainable, high-yield
-            agriculture through innovation in crop scheduling,
-            smart irrigation and climate-resilient farming techniques.
-          </p>
-        </div>
-      </div>
-
-      <div class="prpse_item">
-        <span>02</span>
-        <div>
-          <h3>Our Mission</h3>
-          <p>
-            To provide data-informed project reports and practical
-            guidance—from land preparation and sapling procurement
-            to harvesting and market linkage.
-          </p>
-        </div>
-      </div>
-
-      <a class="btn btn_lght" href="#contact">
-        Plan your project <span>↗</span>
-      </a>
-
-    </div>
-
-    <!-- Right Image -->
-    <div class="vision_imgg">
-      <img
-        src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&w=1100&q=85"
-        alt="Fresh vegetables and sustainable farming"
-        loading="lazy"
-      >
-
-      <div class="vision_image_label">
-        Sustainable growth, from the ground up.
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- team memebr -->
-
-<section class="team_nm_section">
-  <div class="team_nm_header">
-    <div>
-      <span class="team_nm_eyebrow">
-        THE PEOPLE BEHIND THE WORK
-      </span>
-      <h2>Meet our <span>team.</span></h2>
-    </div>
-
-    <p>
-      A dedicated network of leadership, agricultural specialists
-      and field professionals supports project execution and client coordination.
-    </p>
-  </div>
-
-  <div class="team_nm_grid">
-
-    <!-- Team Card 1 -->
-    <div class="team_nm_card">
-      <img
-        src="rohit-singh.jpeg"
-        alt="Rohit Singh"
-      >
-
-      <div class="team_nm_info">
-        <span class="team_nm_category">LEADERSHIP</span>
-        <h3>Rohit Singh</h3>
-        <h4>Managing Director</h4>
-        <p>
-          Strategic vision, modern farming methodologies and
-          commercial agriculture consultancy.
-        </p>
-      </div>
-    </div>
-
-    <!-- Team Card 2 -->
-    <div class="team_nm_card">
-      <img
-        src="akhilesh-singh-rathour.jpeg"
-        alt="Akhilesh Singh Rathour"
-      >
-
-      <div class="team_nm_info">
-        <span class="team_nm_category">
-          MARKETING &amp; STRATEGY
-        </span>
-        <h3>Akhilesh Singh Rathour</h3>
-        <h4>Marketing &amp; Strategic Advisor</h4>
-        <p>
-          Marketing initiatives, client relations and service coordination.
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="team_nm_contact">
-    <a href="/contact" class="team_nm_contact_btn">
-      Contact Us ↗
-    </a>
-  </div>
-</section>
-
-<!-- projects -->
- <!-- PROJECTS SECTION -->
-<section class="bhp_projects section-pad" id="projects">
-  <div class="container bhp_container">
-
-    <div class="bhp_section_heading">
-      <div>
-        <div class="bhp_eyebrow">
-          <span></span> SELECTED EXPERIENCE
-        </div>
-
-        <h2>
-          Grounded in the field.<br>
-          <em>Focused on results.</em>
-        </h2>
-      </div>
-
-      <p>
-        Our portfolio includes orchard consultancy, premium crop
-        support and protected cultivation projects.
-      </p>
-    </div>
-
-    <div class="bhp_project_grid">
-
-      <!-- PROJECT 01 -->
-      <article class="bhp_project_card bhp_project_large">
-        <img
-          src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1200&q=85"
-          alt="Fruit orchard with green trees"
-          loading="lazy"
-        >
-
-        <div class="bhp_project_shade"></div>
-
-        <div class="bhp_project_content">
-          <span class="bhp_project_category">
-            PROJECT 01 · ORCHARDING
-          </span>
-
-          <h3>
-            High-Density Guava<br>
-            Meadow Orcharding
-          </h3>
-
-          <p>
-            Orchard planning, precision drip irrigation and
-            customized fertigation guidance.
-          </p>
-
-          <a href="#contact" class="bhp_project_link">
-            Discuss a similar project ↗
-          </a>
-        </div>
-      </article>
-
-      <!-- PROJECT 02 -->
-      <article class="bhp_project_card">
-        <img
-          src="https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&w=900&q=85"
-          alt="Rows of cultivated crops"
-          loading="lazy"
-        >
-
-        <div class="bhp_project_shade"></div>
-
-        <div class="bhp_project_content">
-          <span class="bhp_project_category">
-            PROJECT 02 · CROP CONSULTANCY
-          </span>
-
-          <h3>
-            Premium Crop<br>
-            Health Support
-          </h3>
-
-          <p>
-            Site inspections and plant-health restoration support
-            for high-value plantations.
-          </p>
-
-          <a href="#contact" class="bhp_project_link">
-            Explore consultancy ↗
-          </a>
-        </div>
-      </article>
-
-    </div>
-
-    <p class="bhp_project_disclaimer">
-      Project descriptions are based on company-provided information.
-      Outcomes depend on location, crop, inputs, climate and management;
-      returns are not guaranteed.
-    </p>
-
-  </div>
-</section>
-<!-- Our Customers -->
-
-
-<section class="bva-customers" id="customers">
-  <div class="bva-customer-container">
-
-    <h2 class="bva-customer-title">
-      Our <span>Valuable Customers</span>
-    </h2>
-
-    <div class="bva-slider">
-
-      <button class="bva-arrow bva-prev"
-        aria-label="Previous customers">
-        &#8249;
-      </button>
-
-      <div class="bva-track-wrapper">
-        <div class="bva-track">
-
-          <div class="bva-logo-card">
-            <img src="images/bayer.png" alt="Bayer">
-          </div>
-
-          <div class="bva-logo-card">
-            <img src="images/var.png" alt="VNR Seeds">
-          </div>
-
-          <div class="bva-logo-card">
-            <img src="images/sahyadri.png" alt="Sahyadri Farms">
-          </div>
-
-          <div class="bva-logo-card">
-            <img src="images/syngenta.png" alt="Syngenta">
-          </div>
-
-          <div class="bva-logo-card">
-            <img src="images/kiboko.png" alt="Kiboko">
-          </div>
-
-          <div class="bva-logo-card">
-            <img src="images/triangle-farms.png" alt="Triangle Farms">
-          </div>
-
-          <div class="bva-logo-card">
-            <img src="images/customer-7.png" alt="Customer 7">
-          </div>
-
-        </div>
-      </div>
-
-      <button class="bva-arrow bva-next"
-        aria-label="Next customers">
-        &#8250;
-      </button>
-
-    </div>
-  </div>
-</section>
-
-
-
-<!-- request a consultation -->
-
-<section class="cta_nhgf_section">
-  <div class="cta_nhgf_container">
-
-    <div class="cta_nhgf_content">
-      <div class="cta_nhgf_eyebrow">
-        LET'S BUILD SOMETHING BETTER
-      </div>
-
-      <h2 class="cta_nhgf_heading">
-        Have an agriculture project in mind?
-      </h2>
-    </div>
-
-    <div class="cta_nhgf_action">
-      <a href="#contact" class="cta_nhgf_button">
-        Request a Consultation
-        <span class="cta_nhgf_arrow">↗</span>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-<!--  Testimonials -->
-
-
-
-<section class="tstmnial_dfg_section">
-  <div class="tstmnial_dfg_container">
-
-    <!-- Left: Company Branding -->
-    <div class="tstmnial_dfg_sidebar">
-
-      <div class="tstmnial_dfg_eyebrow">
-        <span></span> FARMER EXPERIENCES
-      </div>
-
-      <h2 class="tstmnial_dfg_heading">
-        Our <span>Farmers</span><br>
-        Say
-      </h2>
-
-      <div class="tstmnial_dfg_brand">
-
-        <!-- Bhawana Agrotech Logo -->
-        <div class="tstmnial_dfg_logo">
-          <img
-            src="logo.png"
-            alt="Bhawana Agrotech Logo"
-            class="brand_logo_img"
-          >
-        </div>
-
-        <div class="tstmnial_dfg_brand_info">
-          <h3>Bhawana Agrotech</h3>
-          <p>Growing Trust, Growing Together</p>
-        </div>
-
-      </div>
-
-      
-
-    </div>
-
-    <!-- Right: Testimonial Slider -->
-    <div class="tstmnial_dfg_slider">
-
-      <button class="tstmnial_dfg_arrow tstmnial_dfg_prev"
-              type="button"
-              aria-label="Previous reviews">
-        &#8249;
-      </button>
-
-      <div class="tstmnial_dfg_track">
-
-        <!-- Review 1 -->
-        <article class="tstmnial_dfg_card">
-
-          <div class="tstmnial_dfg_card_header">
-            <div class="tstmnial_dfg_avatar">RK</div>
-
-            <div class="tstmnial_dfg_user">
-              <h3>Rajesh Kumar</h3>
-              <span>Vegetable Farmer</span>
-            </div>
-
-            <span class="tstmnial_dfg_quote">“</span>
-          </div>
-
-          <div class="tstmnial_dfg_card_stars">★★★★★</div>
-
-          <p class="tstmnial_dfg_review_text">
-            Bhawana Agrotech helped us plan our crop cycle
-            and organise farming activities more effectively.
-            Their practical guidance on irrigation and crop
-            management gave us a clearer direction.
-          </p>
-
-          <div class="tstmnial_dfg_card_footer">
-            <span class="tstmnial_dfg_review_tag">
-              Crop Management
-            </span>
-            <span class="tstmnial_dfg_leaf">✳</span>
-          </div>
-
-        </article>
-
-        <!-- Review 2 -->
-        <article class="tstmnial_dfg_card">
-
-          <div class="tstmnial_dfg_card_header">
-            <div class="tstmnial_dfg_avatar">SP</div>
-
-            <div class="tstmnial_dfg_user">
-              <h3>Sunita Patel</h3>
-              <span>Farm Owner</span>
-            </div>
-
-            <span class="tstmnial_dfg_quote">“</span>
-          </div>
+  overflow: hidden;
+}
+
+.bva-customer-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bva-customer-title {
+  margin: 0 0 50px;
+  text-align: center;
+  font-size: clamp(30px, 3.2vw, 52px);
+  font-weight: 400;
+  color: #252a2e;
+}
+
+.bva-customer-title span {
+  color: #86bf45;
+  font-weight: 700;
+}
+
+.bva-marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bva-marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  animation: bva-scroll-left 32s linear infinite;
+  will-change: transform;
+}
+
+.bva-logo-card {
+  flex: 0 0 250px;
+  height: 138px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 10px solid #f1f1f1;
+}
+
+.bva-logo-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@keyframes bva-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .bva-customers {
+    padding: 38px 0;
+  }
+
+  .bva-customer-title {
+    margin-bottom: 32px;
+    font-size: 30px;
+  }
+
+  .bva-marquee-track {
+    gap: 16px;
+    animation-duration: 24s;
+  }
+
+  .bva-logo-card {
+    flex-basis: 175px;
+    height: 105px;
+    border-width: 7px;
+    padding: 8px;
+  }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .bva-marquee-track {
+    animation: none;
+  }
+}
+
+
+/* our partners */
+
+
+/* OUR PARTNERS - DARK THEME */
+.bva_partners {
+  width: 100%;
+  padding: 55px 0 60px;
+  background: #103D2C;
+  border-top: 1px solid #244B38;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.bva_partners_container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.bva_partners_title {
+  margin: 0 20px 12px;
+  text-align: center;
+  font-size: clamp(30px, 3vw, 48px);
+  line-height: 1.2;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.bva_partners_title span {
+  color: #91C94F;
+  font-weight: 700;
+}
+
+.bva_partners_desc {
+  max-width: 600px;
+  margin: 0 auto 38px;
+  padding: 0 18px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #D0DED3;
+}
+
+.bva_partners_marquee {
+  width: 100%;
+  overflow: hidden;
+}
+
+.bva_partners_track {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  width: max-content;
+  animation: bva_partners_left_right 32s linear infinite;
+  will-change: transform;
+}
+
+.bva_partner_card {
+  flex: 0 0 230px;
+  height: 125px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border: 1px solid #DCE5DC;
+  border-radius: 8px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+.bva_partner_card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Continuous left-to-right animation */
+@keyframes bva_partners_left_right {
+  from {
+    transform: translateX(-50%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bva_partners {
+    padding: 40px 0;
+  }
+
+  .bva_partners_title {
+    font-size: 30px;
+  }
+
+  .bva_partners_desc {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .bva_partners_track {
+    gap: 16px;
+    animation-duration: 25s;
+  }
+
+  .bva_partner_card {
+    flex-basis: 170px;
+    height: 100px;
+    padding: 10px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bva_partners_track {
+    animation: none;
+  }
+}
 
-          <div class="tstmnial_dfg_card_stars">★★★★★</div>
-
-          <p class="tstmnial_dfg_review_text">
-            The guidance on land preparation, sapling
-            selection and seasonal planning was easy to
-            understand. It helped us approach our
-            agriculture project in a more organised way.
-          </p>
-
-          <div class="tstmnial_dfg_card_footer">
-            <span class="tstmnial_dfg_review_tag">
-              Farm Planning
-            </span>
-            <span class="tstmnial_dfg_leaf">✳</span>
-          </div>
-
-        </article>
-
-        <!-- Review 3 -->
-        <article class="tstmnial_dfg_card">
-
-          <div class="tstmnial_dfg_card_header">
-            <div class="tstmnial_dfg_avatar">AM</div>
-
-            <div class="tstmnial_dfg_user">
-              <h3>Amit Mishra</h3>
-              <span>Agriculture Entrepreneur</span>
-            </div>
-
-            <span class="tstmnial_dfg_quote">“</span>
-          </div>
-
-          <div class="tstmnial_dfg_card_stars">★★★★★</div>
-
-          <p class="tstmnial_dfg_review_text">
-            Their project guidance helped us understand
-            the different stages of setting up a farm,
-            from initial preparation to harvesting and
-            market planning. A useful planning resource.
-          </p>
-
-          <div class="tstmnial_dfg_card_footer">
-            <span class="tstmnial_dfg_review_tag">
-              Project Guidance
-            </span>
-            <span class="tstmnial_dfg_leaf">✳</span>
-          </div>
-
-        </article>
-
-        <!-- Review 4 -->
-        <article class="tstmnial_dfg_card">
-
-          <div class="tstmnial_dfg_card_header">
-            <div class="tstmnial_dfg_avatar">VS</div>
-
-            <div class="tstmnial_dfg_user">
-              <h3>Vikram Singh</h3>
-              <span>Crop Producer</span>
-            </div>
-
-            <span class="tstmnial_dfg_quote">“</span>
-          </div>
-
-          <div class="tstmnial_dfg_card_stars">★★★★★</div>
-
-          <p class="tstmnial_dfg_review_text">
-            The crop scheduling and resource management
-            suggestions gave us a more structured approach
-            to the growing season. The recommendations
-            were straightforward and relevant to our plans.
-          </p>
-
-          <div class="tstmnial_dfg_card_footer">
-            <span class="tstmnial_dfg_review_tag">
-              Sustainable Farming
-            </span>
-            <span class="tstmnial_dfg_leaf">✳</span>
-          </div>
-
-        </article>
-
-      </div>
-
-      <button class="tstmnial_dfg_arrow tstmnial_dfg_next"
-              type="button"
-              aria-label="Next reviews">
-        &#8250;
-      </button>
-
-      <div class="tstmnial_dfg_dots"></div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- FAQ Section -->
-
-<section class="faq_frminfo_section" id="faqs">
-  <div class="faq_frminfo_container">
-
-    <div class="faq_frminfo_header">
-      <div class="faq_frminfo_eyebrow">
-        <span></span> FREQUENTLY ASKED QUESTIONS <span></span>
-      </div>
-
-      <h2 class="faq_frminfo_heading">
-        Have Questions? <em>We’re Here to Help.</em>
-      </h2>
-
-      <p class="faq_frminfo_intro">
-        Find answers to common questions about our agricultural
-        services, farming solutions and project planning.
-      </p>
-    </div>
-
-    <div class="faq_frminfo_list">
-
-      <div class="faq_frminfo_item active">
-        <button class="faq_frminfo_question" type="button"
-          aria-expanded="true">
-          <span>What services does Bhawana Agrotech offer?</span>
-          <i class="faq_frminfo_icon"></i>
-        </button>
-        <div class="faq_frminfo_answer">
-          <div class="faq_frminfo_answer_inner">
-            We offer agricultural project guidance, polyhouse and
-            nethouse solutions, high-density orcharding, drip
-            irrigation guidance and project planning services.
-            Contact our team to discuss your requirements.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq_frminfo_item">
-        <button class="faq_frminfo_question" type="button"
-          aria-expanded="false">
-          <span>Can you help me start a new farming project?</span>
-          <i class="faq_frminfo_icon"></i>
-        </button>
-        <div class="faq_frminfo_answer">
-          <div class="faq_frminfo_answer_inner">
-            Yes, our team can help you explore crop selection,
-            land preparation, irrigation requirements and
-            infrastructure options based on your project goals.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq_frminfo_item">
-        <button class="faq_frminfo_question" type="button"
-          aria-expanded="false">
-          <span>Do you provide DPR and project planning?</span>
-          <i class="faq_frminfo_icon"></i>
-        </button>
-        <div class="faq_frminfo_answer">
-          <div class="faq_frminfo_answer_inner">
-            We can discuss Detailed Project Report (DPR)
-            requirements, estimated project costs, infrastructure
-            planning and other project-specific requirements.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq_frminfo_item">
-        <button class="faq_frminfo_question" type="button"
-          aria-expanded="false">
-          <span>Is polyhouse farming suitable for my land?</span>
-          <i class="faq_frminfo_icon"></i>
-        </button>
-        <div class="faq_frminfo_answer">
-          <div class="faq_frminfo_answer_inner">
-            Suitability depends on your location, climate,
-            crop selection, budget, water availability and
-            market demand. These factors should be assessed
-            before starting a project.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq_frminfo_item">
-        <button class="faq_frminfo_question" type="button"
-          aria-expanded="false">
-          <span>Do you provide drip irrigation guidance?</span>
-          <i class="faq_frminfo_icon"></i>
-        </button>
-        <div class="faq_frminfo_answer">
-          <div class="faq_frminfo_answer_inner">
-            Yes, you can discuss drip irrigation and fertigation
-            requirements with our team. The recommended setup
-            depends on crop type, soil conditions, water quality
-            and farm size.
-          </div>
-        </div>
-      </div>
-
-      <div class="faq_frminfo_item">
-        <button class="faq_frminfo_question" type="button"
-          aria-expanded="false">
-          <span>How can I contact Bhawana Agrotech?</span>
-          <i class="faq_frminfo_icon"></i>
-        </button>
-        <div class="faq_frminfo_answer">
-          <div class="faq_frminfo_answer_inner">
-            You can contact us by phone or email, or fill out
-            the enquiry form on our website with your project
-            details so that we can discuss the next steps.
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <div class="faq_frminfo_bottom">
-      <p>Still have questions about your agricultural project?</p>
-      <a href="#contact" class="faq_frminfo_cta">
-        Get in Touch <span>↗</span>
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- CONTACT footer-->
-    
-<section class="footer_frminfo_section" id="contact">
-  <div class="footer_frminfo_container">
-
-    <!-- Left Contact Information -->
-    <div class="footer_frminfo_copy">
-
-      <div class="footer_frminfo_eyebrow">
-        <span></span> START A CONVERSATION
-      </div>
-
-      <h2 class="footer_frminfo_heading">
-        Let’s grow your<br>
-        <em>next big idea.</em>
-      </h2>
-
-      <p class="footer_frminfo_intro">
-        Tell us about your land, crop or agricultural project.
-        Our team can help you explore the next steps.
-      </p>
-
-      <div class="footer_frminfo_details">
-
-        <a href="tel:+918303839200"
-           class="footer_frminfo_detail">
-
-          <span class="footer_frminfo_icon">☎</span>
-
-          <span class="footer_frminfo_detail_text">
-            <small>CALL US</small>
-            <strong>830-383-9200</strong>
-          </span>
-
-        </a>
-
-        <a href="mailto:info@bhawanabiotech.com"
-           class="footer_frminfo_detail">
-
-          <span class="footer_frminfo_icon">✉</span>
-
-          <span class="footer_frminfo_detail_text">
-            <small>EMAIL US</small>
-            <strong>info@bhawanabiotech.com</strong>
-          </span>
-
-        </a>
-
-        <div class="footer_frminfo_detail">
-
-          <span class="footer_frminfo_icon">⌖</span>
-
-          <span class="footer_frminfo_detail_text">
-            <small>VISIT US</small>
-            <strong>
-              D-133, Anushka Tower, Vibhuti Khand,<br>
-              Gomti Nagar, Lucknow, UP – 226010
-            </strong>
-          </span>
-
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Right Enquiry Form -->
-    <form class="footer_frminfo_form" id="footer_frminfo_form">
-
-      <h3>How can we help?</h3>
-
-      <p class="footer_frminfo_form_intro">
-        Share a few details and prepare an enquiry message.
-      </p>
-
-      <label for="footer_frminfo_name">Your name</label>
-      <input
-        id="footer_frminfo_name"
-        name="name"
-        type="text"
-        placeholder="Enter your name"
-        required
-      >
-
-      <label for="footer_frminfo_email">Email address</label>
-      <input
-        id="footer_frminfo_email"
-        name="email"
-        type="email"
-        placeholder="you@example.com"
-        required
-      >
-
-      <label for="footer_frminfo_service">Interested in</label>
-      <select
-        id="footer_frminfo_service"
-        name="service"
-        required
-      >
-        <option value="">Select a service</option>
-        <option value="Polyhouse & Nethouse">Polyhouse & Nethouse</option>
-        <option value="High-Density Orcharding">High-Density Orcharding</option>
-        <option value="Drip Irrigation & Fertigation">Drip Irrigation & Fertigation</option>
-        <option value="DPR & Project Planning">DPR & Project Planning</option>
-        <option value="Other agricultural consultancy">Other agricultural consultancy</option>
-      </select>
-
-      <label for="footer_frminfo_message">Project details</label>
-      <textarea
-        id="footer_frminfo_message"
-        name="message"
-        rows="3"
-        placeholder="Tell us briefly about your project"
-      ></textarea>
-
-      <button
-        class="footer_frminfo_submit"
-        type="submit"
-      >
-        Prepare enquiry <span>↗</span>
-      </button>
-
-      <p
-        class="footer_frminfo_status"
-        id="footer_frminfo_status"
-        role="status"
-      ></p>
-
-      <small class="footer_frminfo_note">
-        This form opens your email app to prepare an enquiry.
-        Your details are not stored on a server by this demo.
-      </small>
-
-    </form>
-
-  </div>
-</section>
-
-
-
-  </main>
-
-  <footer class="footer">
-    <div class="container footer-inner">
-
-      <img src="logo.png" class="brand_logo_img" alt="Bhawana Biotech Logo">
-
-      <p>Practical guidance for a more informed farming journey.</p>
-
-      <span>
-        © <span id="currentYear"></span>
-        Bhawana Agrotech. All rights reserved.
-      </span>
-
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
