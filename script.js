@@ -231,3 +231,125 @@ document.querySelectorAll(".faq_frminfo_section").forEach(function(section) {
 });
 
 
+(function () {
+  function initSuccessStries() {
+    document.querySelectorAll(".success_stry_section").forEach(function (section) {
+      if (section.dataset.successStrYReady === "true") return;
+      section.dataset.successStrYReady = "true";
+
+      var panels = section.querySelectorAll(".success_stry_panel");
+
+      function activatePanel(selected) {
+        panels.forEach(function (panel) {
+          var isActive = panel === selected;
+          panel.classList.toggle("success_stry_active", isActive);
+          panel.setAttribute("aria-expanded", String(isActive));
+        });
+      }
+
+      panels.forEach(function (panel) {
+        panel.addEventListener("mouseenter", function () {
+          if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+            activatePanel(panel);
+          }
+        });
+
+        panel.addEventListener("click", function () {
+          activatePanel(panel);
+        });
+
+        panel.addEventListener("keydown", function (event) {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            activatePanel(panel);
+          }
+        });
+      });
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initSuccessStries);
+  } else {
+    initSuccessStries();
+  }
+})();
+
+
+
+(function () {
+  function initFarmerStoryPopup() {
+    var popup = document.getElementById("farmerStoryPopup");
+
+    if (!popup || popup.dataset.storyReady === "true") return;
+
+    popup.dataset.storyReady = "true";
+
+    var panels = document.querySelectorAll(
+      ".success_stry_section .success_stry_panel"
+    );
+
+    var closeButtons = popup.querySelectorAll("[data-story-close]");
+    var dialog = popup.querySelector(".farmer_story_dialog");
+    var lastFocusedElement = null;
+
+    function openPopup() {
+      lastFocusedElement = document.activeElement;
+
+      popup.classList.add("farmer_story_open");
+      popup.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      var closeButton = popup.querySelector(".farmer_story_close");
+
+      if (closeButton) closeButton.focus();
+    }
+
+    function closePopup() {
+      popup.classList.remove("farmer_story_open");
+      popup.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+
+      if (lastFocusedElement && lastFocusedElement.focus) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    panels.forEach(function (panel) {
+      panel.addEventListener("click", openPopup);
+
+      panel.addEventListener("keydown", function (event) {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openPopup();
+        }
+      });
+    });
+
+    closeButtons.forEach(function (button) {
+      button.addEventListener("click", closePopup);
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (
+        event.key === "Escape" &&
+        popup.classList.contains("farmer_story_open")
+      ) {
+        closePopup();
+      }
+    });
+
+    dialog.addEventListener("click", function (event) {
+      event.stopPropagation();
+    });
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener(
+      "DOMContentLoaded",
+      initFarmerStoryPopup
+    );
+  } else {
+    initFarmerStoryPopup();
+  }
+})();
