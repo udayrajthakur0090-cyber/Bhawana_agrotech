@@ -353,3 +353,12 @@ document.querySelectorAll(".faq_frminfo_section").forEach(function(section) {
     initFarmerStoryPopup();
   }
 })();
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const bh_year_element = document.getElementById("bh_current_year");
+
+    if (bh_year_element) {
+        bh_year_element.textContent = new Date().getFullYear();
+    }
+});
