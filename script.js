@@ -32,28 +32,17 @@
 })();
 // About section scroll animation
 
-const aboutElements = document.querySelectorAll(
-  ".about-visual, .about-content"
-);
+document.addEventListener("DOMContentLoaded", function () {
 
-const aboutObserver = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
+    const aboutElements = document.querySelectorAll(
+        ".about-visual, .about-content"
+    );
+
+    aboutElements.forEach(function (element) {
+        element.classList.add("show");
     });
-  },
-  {
-    threshold: 0.2
-  }
-);
 
-aboutElements.forEach((element) => {
-  aboutObserver.observe(element);
 });
-
 
 document.querySelectorAll(".tstmnial_dfg_slider").forEach(function(slider) {
   const track = slider.querySelector(".tstmnial_dfg_track");

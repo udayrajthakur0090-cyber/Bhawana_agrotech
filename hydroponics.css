@@ -1,0 +1,137 @@
+
+/* HYDROPONICS PAGE */
+
+.hy_container{width:min(1180px,calc(100% - 48px));margin:0 auto}
+.hy_section{padding:90px 0}
+.hy_hero{min-height:570px;display:flex;align-items:center;position:relative;background:url("https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=2000&q=85") center/cover no-repeat;color:#fff}
+.hy_hero_overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(9,35,22,.93),rgba(12,43,27,.7),rgba(12,43,27,.2))}
+.hy_hero_content{position:relative;z-index:1;padding:90px 0}
+.hy_eyebrow,.hy_label{display:inline-block;color:#789b48;font-size:11px;font-weight:800;letter-spacing:2px;margin-bottom:16px}
+.hy_hero .hy_eyebrow{color:#d5ed65}
+.hy_hero h1{max-width:800px;font-family:"Trirong",serif;font-size:clamp(42px,6vw,70px);line-height:1.12;margin:0 0 22px}
+.hy_hero h1 em{color:#d5ed65;font-weight:500}
+.hy_hero_content>p{max-width:650px;color:#e8eee5;font-size:17px;line-height:1.8;margin:0 0 28px}
+.hy_hero_actions{display:flex;gap:13px;flex-wrap:wrap}
+.hy_btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 23px;border-radius:4px;font-size:14px;font-weight:700;text-decoration:none;transition:.25s}
+.hy_btn:hover{transform:translateY(-3px)}
+.hy_btn_lime{background:#d5ed65;color:#173b28}
+.hy_btn_outline{border:1px solid rgba(255,255,255,.7);color:#fff;background:rgba(255,255,255,.08)}
+
+/* INTRO */
+
+.hy_intro{background:#fff}
+.hy_intro_grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.hy_intro_visual{position:relative;padding:0 25px 25px 0}
+.hy_intro_visual:before{content:"";position:absolute;right:0;bottom:0;width:75%;height:75%;background:#edf2e5}
+.hy_intro_visual img{position:relative;z-index:1;width:100%;height:420px;object-fit:cover;display:block;border-radius:5px}
+.hy_image_note{position:absolute;z-index:2;right:0;bottom:0;background:#174b32;color:#fff;padding:16px 22px;display:flex;flex-direction:column}
+.hy_image_note strong{font-family:"Trirong",serif;font-size:18px}
+.hy_image_note span{font-size:11px;color:#dce8d8}
+.hy_intro_content h2,.hy_section_heading h2{font-family:"Trirong",serif;color:#173b28;font-size:clamp(34px,4vw,47px);line-height:1.2;margin:0 0 20px}
+.hy_intro_content h2 em,.hy_section_heading h2 em{color:#789b48;font-weight:500}
+.hy_intro_content p{color:#647066;font-size:15px;line-height:1.9;margin:0 0 15px}
+.hy_text_link{display:inline-flex;gap:13px;align-items:center;color:#174b32;font-weight:800;margin-top:10px;border-bottom:1px solid #a9bd8b;padding-bottom:7px;text-decoration:none}
+.hy_text_link span{font-size:22px}
+
+/* SECTION HEADINGS */
+
+.hy_section_heading{max-width:760px;margin-bottom:42px}
+.hy_section_heading p{color:#647066;font-size:15px;line-height:1.8;margin:0}
+
+/* HIGHLIGHTS */
+
+.hy_highlights{background:#f6f7ef}
+.hy_highlight_grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.hy_highlight_card{position:relative;background:#fff;padding:27px 23px;min-height:245px;border:1px solid #e5ebdf;border-radius:6px;transition:.3s}
+.hy_highlight_card:hover{transform:translateY(-7px);box-shadow:0 14px 30px rgba(23,75,50,.08)}
+.hy_highlight_no{position:absolute;right:20px;top:18px;color:#dce6d4;font-size:13px;font-weight:800}
+.hy_highlight_icon{width:49px;height:49px;display:grid;place-items:center;border-radius:50%;background:#edf3e5;color:#47733c;font-size:25px;margin-bottom:22px}
+.hy_highlight_card h3{font-family:"Trirong",serif;color:#174b32;font-size:19px;line-height:1.4;margin:0 0 10px}
+.hy_highlight_card p{font-size:13px;color:#68756a;line-height:1.8;margin:0}
+
+/* SYSTEM TABS */
+
+.hy_systems{background:#fff}
+.hy_tabs_nav{display:flex;gap:12px;overflow-x:auto;padding:5px 3px 17px;scrollbar-width:thin;scrollbar-color:#a9bd8b #edf2e5}
+.hy_tab_btn{flex:1 0 190px;min-height:67px;padding:13px 17px;border:1px solid #e0e7d9;border-radius:5px;background:#f8faf5;color:#174b32;font-size:14px;font-weight:700;cursor:pointer;transition:.25s}
+.hy_tab_btn:hover{border-color:#789b48;transform:translateY(-2px)}
+.hy_tab_btn.hy_tab_active{background:#174b32;color:#fff;border-color:#174b32;box-shadow:0 7px 18px rgba(23,75,50,.15)}
+.hy_tab_panels{padding:38px;background:#f8faf5;border:1px solid #e8ede3;border-radius:7px;margin-top:20px;min-height:390px}
+.hy_tab_panel[hidden]{display:none!important}
+.hy_panel_grid{display:grid;grid-template-columns:1fr 1fr;gap:43px;align-items:center}
+.hy_panel_image img{width:100%;height:350px;object-fit:cover;display:block;border-radius:5px}
+.hy_panel_tag{font-size:10px;letter-spacing:2px;color:#789b48;font-weight:800}
+.hy_panel_content h3{font-family:"Trirong",serif;font-size:31px;line-height:1.3;color:#174b32;margin:12px 0 15px}
+.hy_panel_content p{color:#647066;font-size:14px;line-height:1.85;margin:0 0 20px}
+.hy_panel_content h4{color:#174b32;font-size:16px;margin:0 0 13px}
+.hy_panel_content ul{list-style:none;padding:0;margin:0}
+.hy_panel_content li{position:relative;padding-left:27px;margin-bottom:11px;color:#526052;font-size:13px;line-height:1.6}
+.hy_panel_content li:before{content:"✓";position:absolute;left:0;top:0;width:19px;height:19px;display:grid;place-items:center;border-radius:50%;background:#edf3e5;color:#47733c;font-size:11px;font-weight:800}
+
+/* ADVANTAGES */
+
+.hy_advantages{background:#f6f7ef}
+.hy_advantage_grid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.hy_advantage_card{position:relative;background:#fff;padding:27px 22px;min-height:215px;border:1px solid #e5ebdf;border-radius:6px;transition:.3s}
+.hy_advantage_card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(23,75,50,.08)}
+.hy_advantage_card>span{display:block;color:#8ba65c;font-size:12px;font-weight:800;margin-bottom:25px}
+.hy_advantage_card h3{font-family:"Trirong",serif;color:#174b32;font-size:19px;line-height:1.4;margin:0 0 10px}
+.hy_advantage_card p{color:#68756a;font-size:13px;line-height:1.8;margin:0}
+
+/* FEATURES */
+
+.hy_features{background:#fff}
+.hy_feature_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
+.hy_feature_item{display:grid;grid-template-columns:190px 1fr;background:#f6f7ef;border-radius:6px;overflow:hidden;transition:.3s}
+.hy_feature_item:hover{transform:translateY(-5px);box-shadow:0 12px 28px rgba(23,75,50,.09)}
+.hy_feature_image img{width:100%;height:100%;min-height:225px;object-fit:cover;display:block}
+.hy_feature_content{padding:24px 22px}
+.hy_feature_content>span{color:#789b48;font-size:10px;font-weight:800;letter-spacing:1.5px}
+.hy_feature_content h3{font-family:"Trirong",serif;color:#174b32;font-size:21px;margin:10px 0}
+.hy_feature_content p{font-size:13px;color:#68756a;line-height:1.8;margin:0}
+
+/* CTA */
+
+.hy_cta{background:#123b28;color:#fff;padding:65px 0}
+.hy_cta_inner{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.hy_cta .hy_label{color:#d5ed65}
+.hy_cta h2{font-family:"Trirong",serif;font-size:clamp(30px,4vw,43px);line-height:1.25;max-width:700px;margin:0 0 12px}
+.hy_cta p{color:#dce8dc;font-size:14px;margin:0}
+.hy_cta .hy_btn{flex-shrink:0}
+
+/* TABLET */
+
+@media(max-width:950px){
+    .hy_intro_grid{gap:38px}
+    .hy_highlight_grid,.hy_advantage_grid{grid-template-columns:repeat(2,1fr)}
+    .hy_panel_grid{gap:28px}
+    .hy_feature_item{grid-template-columns:145px 1fr}
+}
+
+/* MOBILE */
+
+@media(max-width:640px){
+    .hy_container{width:calc(100% - 34px)}
+    .hy_section{padding:65px 0}
+    .hy_hero{min-height:550px}
+    .hy_hero_content{padding:75px 0}
+    .hy_hero h1{font-size:40px}
+    .hy_hero_content>p{font-size:14px}
+    .hy_hero_actions{flex-direction:column;align-items:flex-start}
+    .hy_intro_grid,.hy_panel_grid{grid-template-columns:1fr;gap:30px}
+    .hy_intro_visual img{height:300px}
+    .hy_intro_content h2,.hy_section_heading h2{font-size:34px}
+    .hy_section_heading{margin-bottom:30px}
+    .hy_highlight_grid,.hy_advantage_grid{grid-template-columns:1fr;gap:13px}
+    .hy_highlight_card{min-height:auto}
+    .hy_tab_btn{flex:0 0 175px;min-height:62px;font-size:13px}
+    .hy_tab_panels{padding:19px;margin-top:15px;min-height:auto}
+    .hy_panel_image img{height:230px}
+    .hy_panel_content h3{font-size:27px}
+    .hy_advantage_card{min-height:auto}
+    .hy_feature_grid{grid-template-columns:1fr}
+    .hy_feature_item{grid-template-columns:1fr}
+    .hy_feature_image img{height:210px;min-height:0}
+    .hy_cta_inner{align-items:flex-start;flex-direction:column}
+    .hy_cta{padding:52px 0}
+}

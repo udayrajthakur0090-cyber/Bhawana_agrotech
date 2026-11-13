@@ -176,6 +176,120 @@ span {
   font-size: 25px;
   cursor: pointer;
 }
+
+
+
+/* OUR PRODUCTS DROPDOWN */
+
+.nav_products {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.nav_products_trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.nav_products_trigger:hover {
+    color: #719b42;
+}
+
+/* ARROW */
+
+.nav_products_arrow {
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg);
+    margin-top: -5px;
+    transition: 0.3s ease;
+}
+
+/* HOVER ARROW */
+
+.nav_products:hover .nav_products_arrow {
+    transform: rotate(225deg);
+    margin-top: 5px;
+}
+
+/* DROPDOWN */
+
+.nav_products_menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 245px;
+    padding: 10px;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    display: none;
+    z-index: 9999;
+}
+
+/* SHOW ON HOVER */
+
+.nav_products:hover .nav_products_menu {
+    display: block;
+}
+
+/* DROPDOWN LINKS */
+
+.nav_products_menu a {
+    display: block;
+    padding: 10px 13px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+    border-radius: 5px;
+}
+
+.nav_products_menu a:hover {
+    background: var(--cream);
+    color: var(--green);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .nav_products {
+        display: block;
+        width: 100%;
+    }
+
+    .nav_products_trigger {
+        width: 100%;
+        justify-content: space-between;
+        padding: 12px 0;
+    }
+
+    .nav_products_menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        background: var(--cream);
+        display: none;
+    }
+
+    .nav_products.active .nav_products_menu {
+        display: block;
+    }
+
+    .nav_products.active .nav_products_arrow {
+        transform: rotate(225deg);
+    }
+}
 .hero {
   position: relative;
   min-height: 650px;
@@ -853,6 +967,39 @@ span {
     bottom: 14px;
     font-size: 19px;
   }
+}
+/* mobile nav */
+
+/* Header Navigation */
+.nav.active {
+    display: flex;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        padding: 20px;
+        z-index: 999;
+    }
+
+    .nav.active {
+        display: flex;
+    }
 }
 
 /* FIX: Vertical name cut in collapsed cards */

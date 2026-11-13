@@ -1,0 +1,819 @@
+
+/* ==========================================
+   CROP MASTER PAGE
+========================================== */
+
+.cm_page {
+    background: #ffffff;
+    color: #1c2b22;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.cm_container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   CROP MASTER HERO - HYDROPONICS STYLE
+========================================== */
+
+.cm_hero {
+    position: relative;
+    min-height: 560px;
+    display: flex;
+    align-items: center;
+    background:
+        url("images/crop_master_banner.jpg")
+        center/cover no-repeat;
+    overflow: hidden;
+}
+
+.cm_hero_overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(16, 58, 40, 0.93) 0%,
+        rgba(16, 58, 40, 0.78) 55%,
+        rgba(16, 58, 40, 0.25) 100%
+    );
+}
+
+.cm_hero_content {
+    position: relative;
+    z-index: 2;
+    padding: 100px 20px;
+}
+
+.cm_eyebrow {
+    display: inline-block;
+    color: #d5ed65;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 18px;
+}
+
+.cm_hero h1 {
+    max-width: 750px;
+    color: #ffffff;
+    font-family: 'Trirong', serif;
+    font-size: 52px;
+    line-height: 1.25;
+    margin: 0 0 20px;
+}
+
+.cm_hero h1 em {
+    color: #d5ed65;
+    font-style: normal;
+}
+
+.cm_hero p {
+    max-width: 610px;
+    color: #f0f4ed;
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 0 0 30px;
+}
+
+.cm_hero_actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cm_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cm_btn_lime {
+    background: #d5ed65;
+    color: #103a28;
+}
+
+.cm_btn_lime:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+.cm_btn_outline {
+    border: 1px solid #ffffff;
+    color: #ffffff;
+}
+
+.cm_btn_outline:hover {
+    background: #ffffff;
+    color: #103a28;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .cm_hero {
+        min-height: 470px;
+        background-position: center;
+    }
+
+    .cm_hero_content {
+        padding: 75px 20px;
+    }
+
+    .cm_hero h1 {
+        font-size: 36px;
+    }
+
+    .cm_hero p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cm_hero h1 {
+        font-size: 30px;
+    }
+
+    .cm_hero_actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* ==========================================
+   PRODUCT SECTION
+========================================== */
+
+.cm_product_section {
+    padding: 90px 20px;
+}
+
+.cm_product_layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* Product Image */
+
+.cm_image_column {
+    position: relative;
+}
+
+.cm_product_image {
+    position: relative;
+    min-height: 470px;
+    background: #f4f7ef;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.cm_product_image img {
+    width: 100%;
+    height: 420px;
+    display: block;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.cm_product_image:hover img {
+    transform: scale(1.04);
+}
+
+.cm_image_label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 9px 18px;
+    background: #174b32;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cm_image_note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 20px;
+    margin-top: 15px;
+    background: #f6f7ef;
+    border-left: 3px solid #d5ed65;
+    border-radius: 5px;
+}
+
+.cm_note_icon {
+    color: #719b43;
+    font-size: 23px;
+}
+
+.cm_image_note p {
+    color: #5e6b61;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Product Content */
+
+.cm_section_tag {
+    color: #719b43;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cm_content_column h2 {
+    color: #103a28;
+    font-family: 'Trirong', serif;
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.cm_title_line {
+    width: 65px;
+    height: 3px;
+    background: #d5ed65;
+    margin-bottom: 27px;
+    border-radius: 5px;
+}
+
+.cm_description_heading {
+    color: #174b32;
+    font-size: 19px;
+    font-weight: 700;
+    margin: 0 0 13px;
+}
+
+.cm_description {
+    color: #5e6b61;
+    font-size: 15px;
+    line-height: 1.9;
+    margin: 0 0 15px;
+}
+
+/* Highlights */
+
+.cm_highlights {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cm_highlight_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 14px 16px;
+    background: #f6f8f2;
+    border-radius: 7px;
+    transition: all 0.3s ease;
+}
+
+.cm_highlight_item:hover {
+    background: #eef4e5;
+    transform: translateX(5px);
+}
+
+.cm_highlight_icon {
+    width: 35px;
+    height: 35px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #174b32;
+    color: #d5ed65;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.cm_highlight_item h4 {
+    color: #174b32;
+    font-size: 15px;
+    margin: 0 0 5px;
+}
+
+.cm_highlight_item p {
+    color: #68756b;
+    font-size: 13px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ==========================================
+   APPLICATION AND COMPOSITION
+========================================== */
+
+.cm_details_section {
+    padding: 85px 20px;
+    background: #f6f7ef;
+}
+
+.cm_section_heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.cm_section_heading > span {
+    color: #719b43;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.cm_section_heading h2 {
+    color: #103a28;
+    font-family: 'Trirong', serif;
+    font-size: 35px;
+    margin: 12px 0;
+}
+
+.cm_section_heading h2 em {
+    color: #719b43;
+    font-style: normal;
+}
+
+.cm_section_heading p {
+    color: #68756b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.cm_heading_line {
+    width: 60px;
+    height: 3px;
+    background: #d5ed65;
+    margin: 18px auto 0;
+    border-radius: 5px;
+}
+
+.cm_details_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.cm_detail_card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e8eddf;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(16, 58, 40, 0.04);
+}
+
+.cm_card_heading {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 28px;
+}
+
+.cm_card_icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #174b32;
+    color: #d5ed65;
+    border-radius: 8px;
+    font-size: 23px;
+}
+
+.cm_card_heading span {
+    color: #719b43;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cm_card_heading h3 {
+    color: #174b32;
+    font-family: 'Trirong', serif;
+    font-size: 21px;
+    margin: 5px 0 0;
+}
+
+/* Application Card */
+
+.cm_dose_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    background: #174b32;
+    border-radius: 8px;
+    color: #ffffff;
+    margin-bottom: 22px;
+}
+
+.cm_dose_box span {
+    color: #d5ed65;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.cm_dose_box strong {
+    font-family: 'Trirong', serif;
+    font-size: 42px;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+.cm_dose_box small {
+    color: #ffffff;
+    font-size: 13px;
+}
+
+.cm_detail_row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf0e8;
+    font-size: 14px;
+}
+
+.cm_detail_row:last-child {
+    border-bottom: none;
+}
+
+.cm_detail_row span {
+    color: #68756b;
+}
+
+.cm_detail_row strong {
+    color: #174b32;
+    text-align: right;
+}
+
+/* Composition Card */
+
+.cm_composition_list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cm_composition_info {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+.cm_composition_info span {
+    color: #526157;
+}
+
+.cm_composition_info strong {
+    color: #174b32;
+}
+
+.cm_composition_track {
+    width: 100%;
+    height: 7px;
+    background: #edf1e8;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.cm_composition_track span {
+    display: block;
+    height: 100%;
+    background: #719b43;
+    border-radius: 20px;
+}
+
+/* ==========================================
+   SUITABLE CROPS
+========================================== */
+
+.cm_crops_section {
+    padding: 75px 20px;
+    background: #ffffff;
+}
+
+.cm_crops_content {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.cm_crops_heading > span {
+    color: #719b43;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cm_crops_heading h2 {
+    color: #103a28;
+    font-family: 'Trirong', serif;
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.cm_crops_heading h2 em {
+    color: #719b43;
+    font-style: normal;
+}
+
+.cm_crops_heading p {
+    color: #68756b;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.cm_crop_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.cm_crop_tags span {
+    display: inline-block;
+    padding: 12px 19px;
+    background: #f3f7ec;
+    border: 1px solid #e4ebd9;
+    border-radius: 5px;
+    color: #174b32;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cm_crop_tags span:hover {
+    background: #174b32;
+    border-color: #174b32;
+    color: #ffffff;
+}
+
+/* ==========================================
+   DISCLAIMER
+========================================== */
+
+.cm_disclaimer_section {
+    padding: 0 20px 75px;
+}
+
+.cm_disclaimer_box {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 25px 28px;
+    background: #fff9e9;
+    border-left: 4px solid #d5b54a;
+    border-radius: 6px;
+}
+
+.cm_disclaimer_icon {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #e7c96c;
+    color: #4c411e;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.cm_disclaimer_box h3 {
+    color: #5c4b1c;
+    font-size: 16px;
+    margin: 0 0 8px;
+}
+
+.cm_disclaimer_box p {
+    color: #766a49;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* ==========================================
+   CTA SECTION
+========================================== */
+
+.cm_cta_section {
+    padding: 60px 20px;
+    background: #103a28;
+}
+
+.cm_cta_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.cm_cta_content > div > span {
+    color: #d5ed65;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.cm_cta_content h2 {
+    color: #ffffff;
+    font-family: 'Trirong', serif;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.cm_cta_content p {
+    color: #d0d9d1;
+    font-size: 14px;
+    margin: 0;
+}
+
+.cm_cta_button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 15px 25px;
+    flex-shrink: 0;
+    background: #d5ed65;
+    color: #103a28;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.cm_cta_button:hover {
+    background: #ffffff;
+    transform: translateY(-3px);
+}
+
+.cm_cta_button span {
+    font-size: 20px;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
+
+@media (max-width: 991px) {
+
+    .cm_product_layout {
+        gap: 35px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cm_product_image {
+        min-height: 390px;
+    }
+
+    .cm_product_image img {
+        height: 340px;
+    }
+
+    .cm_content_column h2 {
+        font-size: 32px;
+    }
+
+    .cm_crops_content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .cm_banner {
+        min-height: 230px;
+    }
+
+    .cm_banner h1 {
+        font-size: 34px;
+    }
+
+    .cm_product_section {
+        padding: 60px 18px;
+    }
+
+    .cm_product_layout {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .cm_product_image {
+        min-height: 330px;
+    }
+
+    .cm_product_image img {
+        height: 300px;
+    }
+
+    .cm_content_column h2 {
+        font-size: 30px;
+    }
+
+    .cm_details_section {
+        padding: 60px 18px;
+    }
+
+    .cm_section_heading h2 {
+        font-size: 29px;
+    }
+
+    .cm_details_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cm_detail_card {
+        padding: 24px 20px;
+    }
+
+    .cm_crops_section {
+        padding: 60px 18px;
+    }
+
+    .cm_crops_heading h2 {
+        font-size: 29px;
+    }
+
+    .cm_disclaimer_section {
+        padding: 0 18px 60px;
+    }
+
+    .cm_disclaimer_box {
+        padding: 20px 17px;
+    }
+
+    .cm_cta_section {
+        padding: 45px 18px;
+    }
+
+    .cm_cta_content {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .cm_cta_content h2 {
+        font-size: 24px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .cm_banner h1 {
+        font-size: 29px;
+    }
+
+    .cm_product_image {
+        min-height: 280px;
+    }
+
+    .cm_product_image img {
+        height: 250px;
+    }
+
+    .cm_detail_row {
+        font-size: 12px;
+    }
+
+    .cm_crop_tags {
+        gap: 9px;
+    }
+
+    .cm_crop_tags span {
+        padding: 10px 13px;
+        font-size: 12px;
+    }
+
+}
