@@ -1,0 +1,421 @@
+
+/* =====================================
+   CONTACT PAGE - BHAWANA AGROTECH
+===================================== */
+
+.con_main {
+    width: 100%;
+    overflow: hidden;
+}
+
+.con_container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HERO SECTION */
+
+.con_hero {
+    background: linear-gradient(120deg, #103a28, #174b32);
+    padding: 85px 0 75px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.con_hero_tag {
+    display: inline-block;
+    color: #d5ed65;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.con_hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0 0 18px;
+}
+
+.con_hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.con_breadcrumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 25px;
+    font-size: 14px;
+    color: #d5ed65;
+}
+
+.con_breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.con_breadcrumb a:hover {
+    color: #d5ed65;
+}
+
+/* INTRO SECTION */
+
+.con_intro {
+    padding: 85px 0;
+    background: #f6f7ef;
+}
+
+.con_section_heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.con_section_heading span,
+.con_form_heading span {
+    color: #628b42;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.con_section_heading h2 {
+    color: #174b32;
+    font-size: clamp(27px, 4vw, 38px);
+    line-height: 1.3;
+    margin: 12px 0;
+}
+
+.con_section_heading p {
+    color: #5e6b61;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.con_content_grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* CONTACT INFORMATION */
+
+.con_info_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.con_info_card {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 22px;
+    background: #ffffff;
+    border: 1px solid #e7ebdf;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.con_info_card:hover {
+    transform: translateY(-3px);
+    border-color: #b6ce9a;
+    box-shadow: 0 8px 25px rgba(23, 75, 50, 0.07);
+}
+
+.con_info_icon {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #edf4e5;
+    border-radius: 50%;
+    font-size: 21px;
+}
+
+.con_info_card h3 {
+    color: #174b32;
+    font-size: 17px;
+    margin: 0 0 8px;
+}
+
+.con_info_card p,
+.con_info_card a {
+    display: block;
+    color: #5e6b61;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+}
+
+.con_info_card a:hover {
+    color: #174b32;
+}
+
+.con_quick_actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.con_call_btn,
+.con_whatsapp_btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.con_call_btn {
+    background: #174b32;
+    color: #ffffff;
+}
+
+.con_call_btn:hover {
+    background: #103a28;
+}
+
+.con_whatsapp_btn {
+    background: #d5ed65;
+    color: #174b32;
+}
+
+.con_whatsapp_btn:hover {
+    background: #c5df4e;
+}
+
+/* CONTACT FORM */
+
+.con_form_wrapper {
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #e7ebdf;
+    box-shadow: 0 10px 35px rgba(23, 75, 50, 0.06);
+}
+
+.con_form_heading {
+    margin-bottom: 28px;
+}
+
+.con_form_heading h2 {
+    color: #174b32;
+    font-size: 27px;
+    margin: 10px 0;
+}
+
+.con_form_heading p {
+    color: #5e6b61;
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.con_form_row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.con_form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 19px;
+}
+
+.con_form_group label {
+    color: #263c2e;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.con_form_group input,
+.con_form_group select,
+.con_form_group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #dfe5da;
+    border-radius: 6px;
+    background: #ffffff;
+    color: #1c2b22;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.con_form_group input,
+.con_form_group select {
+    min-height: 48px;
+}
+
+.con_form_group textarea {
+    resize: vertical;
+    min-height: 125px;
+}
+
+.con_form_group input:focus,
+.con_form_group select:focus,
+.con_form_group textarea:focus {
+    border-color: #628b42;
+    box-shadow: 0 0 0 3px rgba(98, 139, 66, 0.10);
+}
+
+.con_submit_btn {
+    width: 100%;
+    border: none;
+    background: #174b32;
+    color: #ffffff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+.con_submit_btn:hover {
+    background: #103a28;
+}
+
+.con_submit_btn span {
+    font-size: 20px;
+}
+
+.con_form_note {
+    color: #7b867d;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.6;
+    margin: 14px 0 0;
+}
+
+/* MAP SECTION */
+
+.con_map_section {
+    padding: 75px 0;
+    background: #ffffff;
+}
+
+.con_map_section .con_section_heading {
+    margin-bottom: 30px;
+}
+
+.con_map_wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 1px solid #e7ebdf;
+    box-shadow: 0 8px 25px rgba(23, 75, 50, 0.08);
+}
+
+.con_map_wrapper iframe {
+    display: block;
+    width: 100%;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 991px) {
+    .con_content_grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .con_info_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .con_quick_actions {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .con_container {
+        width: 92%;
+    }
+
+    .con_hero {
+        padding: 60px 0 50px;
+    }
+
+    .con_hero p {
+        font-size: 14px;
+    }
+
+    .con_intro {
+        padding: 55px 0;
+    }
+
+    .con_section_heading {
+        margin-bottom: 30px;
+    }
+
+    .con_info_wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .con_info_card {
+        padding: 18px;
+    }
+
+    .con_form_wrapper {
+        padding: 23px 18px;
+    }
+
+    .con_form_heading h2 {
+        font-size: 23px;
+    }
+
+    .con_form_row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .con_quick_actions {
+        flex-direction: column;
+    }
+
+    .con_call_btn,
+    .con_whatsapp_btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .con_map_section {
+        padding: 55px 0;
+    }
+
+    .con_map_wrapper iframe {
+        height: 320px;
+    }
+}
